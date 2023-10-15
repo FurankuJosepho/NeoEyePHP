@@ -1,0 +1,8 @@
+/* This style is for univesal style */
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar-brand{
+    margin-left: 100px !important;
+}
