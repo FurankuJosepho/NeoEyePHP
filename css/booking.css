@@ -1,0 +1,23 @@
+.btn{
+    border: 2px solid #192e5b;
+    color: #192e5b;
+}
+.btn:hover{
+    border: 2px solid #192e5b;
+    color: #192e5b;
+    background-color:#fcc34f;
+}
+.formContainer{
+    padding: 1.5rem 2rem;
+    margin: 2.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px #0000008a;
+}
+.bookNow{
+    border: 2px solid #fcc34f;
+    color: #fcc34f !important;
+}
+.bookNow:hover{
+    border: 2px solid #fcc34f;
+    color: #fcc34f !important;
+}
