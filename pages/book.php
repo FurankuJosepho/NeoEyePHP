@@ -19,7 +19,7 @@
 <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
             <a href="../index.php" class="navbar-brand text-white">
-                Neo Eye Clinic
+                Neo Eye Optical Clinic
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
