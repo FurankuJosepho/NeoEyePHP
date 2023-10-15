@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --c-o: #fcc34f;
+  --c-db: #192e5b;
+  --c-sb: #70ced0;
+  --c-w: #fff;
+  --f-p: 'Poppins';
+}
+
+.neoeye {
+ width: 90%;
+ margin: 15px auto;
+}
+
+.neoeyes-container {
+ display: flex;
+ gap: 25px;
+ margin-bottom: 50px;
+}
+
+.img-doctor {
+ align-self: center;
+ border-radius: 10px;
+ width: 50%;
+}
+
+.neo {
+  background-color: var(--c-sb);
+  margin-bottom: 40px;
+  color: var(--c-db);
+}
+
+.neo-containers {
+  width: 95%;
+  margin: auto;
+  padding: 20px 0 20px 0;
+}
+
+.neo-text{
+ text-align: center;
+}
+
+.neo-para {
+  text-align: center;
+}
+
+.neo-container1 {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ width: 90%;
+ margin: auto;
+ text-align: center;
+}
+
+.experts {
+ display: flex;
+ flex-direction: column;
+ width: 98%;
+ margin: auto auto 20px auto;
+ color: var(--c-db);
+}
+
+.expert-container{
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.experts-contain {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.expert-name {
+ color: var(--c-sb);
+}
+
+.expert-text {
+ text-align: center;
+ margin-bottom: 20px;
+}
+
+.expert-img {
+ height: 400px;
+}
+
+.info-btn {
+ padding: 10px;
+ border-radius: 15px;
+ color: var(--c-db);
+ border: var(--c-db) solid 2px;
+ background-color: var(--c-w);
+}
+
+.info-btn:hover {
+ color: var(--c-o);
+ border: var(--c-o) solid 2px;
+}

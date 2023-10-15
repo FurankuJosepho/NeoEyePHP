@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --c-o: #fcc34f;
+  --c-db: #192e5b;
+  --c-sb: #70ced0;
+  --c-w: #fff;
+  --f-p: 'Poppins';
+}
+
+body {
+  color: var(--c-db);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.paragraph-container {
+  width: 90%;
+  margin: 25px auto 10px;
+}
+
+.service-container {
+  width: 99%;
+  margin: auto;
+}
+
+.service-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 25px;
+  margin: 15px 40px;
+}
+
+.card-container .card-img {
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.service {
+  text-align: center;
+}
+
+.sevice-item {
+  text-transform: uppercase;
+}
+
+.testimonial-container {
+  text-align: center;
+}
+
+.testimonial-text {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.comment-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 25px;
+  margin: 15px 40px;
+}
+
+.comment-item {
+  background-color: var(--c-sb);
+  padding: 10px;
+  border-radius: 5px;
+}

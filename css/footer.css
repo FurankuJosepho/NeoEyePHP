@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --c-o: #fcc34f;
+  --c-db: #192e5b;
+  --c-sb: #70ced0;
+  --c-w: #fff;
+  --f-p: 'Poppins';
+}
+
+.footer {
+  color: var(--c-w);
+  background-color: var(--c-db);
+}
+
+.footer .footer-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 50px;
+}
+
+.colsan{
+ display: flex;
+ align-items: center;
+}
+
+.footer-col {
+  width: 250px;
+}
+
+.footer ul,
+.social-container {
+  margin: 5px 0;
+  padding: 0;
+}
+
+.footer ul li {
+  list-style: none;
+}
+
+.footer .logo {
+  width: 135px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.location,
+.phone,
+.envelope {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.customer-service,
+.about-us,
+.connect {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.social-container i {
+  padding-right: 10px;
+  font-size: 1.5em;
+}
+
+.copyright {
+  background-color: var(--c-w);
+  color: var(--c-db);
+  text-align: center;
+  text-transform: capitalize;
+}
