@@ -4,11 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/index.css">
@@ -21,9 +18,7 @@
             <a href="../index.php" class="navbar-brand text-white">
                 Neo Eye Clinic
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="bi bi-list"></i>
             </button>
 
@@ -40,11 +35,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="login.php" class="nav-link text-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                                <path fill-rule="evenodd"
-                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                             </svg>
                         </a>
                     </li>
@@ -53,7 +46,36 @@
         </div>
     </nav>
 
-    <!-- Body Section Pls put documentation in every section para hindi na sila mag hanap Bros paki lagay nlng comments -->
+    <!-- main section -->
+    <main>
+        <h1 className="neoeye-header">About NeoEye Optical</h1>
+        <div className="neoeyes-container">
+            <div className="neoeye-container">
+                <p className="neoeye-para">
+                    Welcome to NeoEye Optical Clinic, a leading name in the
+                    Philippines' eye care landscape. Our dedicated team of experienced
+                    doctors is committed to providing top-tier eye care services to
+                    our valued patients. Our approach revolves around delivering
+                    personalized, patient-centered care that caters to the unique
+                    needs of every individual.
+                </p>
+                <p className="neoeye-para">
+                    At NeoEye, we merge our years of expertise with the latest in eye
+                    care technology to diagnose and treat a wide range of eye
+                    conditions. Whether you require a routine eye examination,
+                    precision contact lens fittings, or specialized treatment for an
+                    eye ailment, we're here to serve you with the utmost
+                    professionalism and knowledge. Our mission is not only to
+                    safeguard and improve your eye health but also to empower you
+                    through informed decision-making, as we believe that well-informed
+                    patients are more likely to achieve the best outcomes. NeoEye
+                    Optical Clinic isn't just a place for eye care – it's a sanctuary
+                    where expertise and compassion merge to enhance your vision and
+                    protect your ocular well-being. We invite you to experience the
+                    NeoEye difference.
+                </p>
+            </div>
+    </main>
 </body>
 
 </html>
