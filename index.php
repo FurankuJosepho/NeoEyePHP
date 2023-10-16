@@ -57,8 +57,8 @@
 			<!-- Additional required wrapper -->
 			<div class="swiper-wrapper">
 				<!-- Slides -->
-				<div class="swiper-slide" data-swiper-autoplay="2000"><img src="../NeoEyePHP/images/JPG/slider1.jpg" alt="Slider 1"></div>
-				<div class="swiper-slide"><img src="../NeoEyePHP/images/JPG/slider2.jpg" alt="Slider 2"></div>
+				<div class="swiper-slide" data-swiper-autoplay="2000"><img src="images/JPG/slider1.jpg" alt="Slider 1"></div>
+				<div class="swiper-slide"><img src="images/JPG/slider2.jpg" alt="Slider 2"></div>
 			</div>
 			<!-- If we need pagination -->
 			<div class="swiper-pagination"></div>
