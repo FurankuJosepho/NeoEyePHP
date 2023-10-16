@@ -1,3 +1,6 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "", "neoeye");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +19,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-md">
+    <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
             <a href="../index.php" class="navbar-brand text-white">
                 Neo Eye Optical Clinic
@@ -54,6 +57,32 @@
     </nav>
 
     <!-- Body Section Pls put documentation in every section para hindi na sila mag hanap Bros paki lagay nlng comments -->
+
+    <div class="container-fluid">
+        <div class="left"></div>
+        <div class="right">
+            <?php
+            $query = "SELECT * FROM `products`";
+            $result = mysqli_query($connect, $query);
+
+
+            while ($prods = mysqli_fetch_array($result)) { ?>
+                <form action="get" action="products.php?id=<?= $prods['id'] ?>">
+                <div class="card">
+                    <img src="img/<?= $prods['image'] ?>" alt="">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h4><?= $prods['name'] ?></h4>
+                            <p><?= $prods['price'] ?></p>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            <?php }
+            ?>
+        </div>
+        <div class="bottom"></div>
+    </div>
 </body>
 
 </html>
