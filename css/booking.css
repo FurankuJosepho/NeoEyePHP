@@ -13,11 +13,11 @@
     border-radius: 20px;
     box-shadow: 0 4px 12px #0000008a;
 }
-.bookNow{
-    border: 2px solid #fcc34f;
+.Booking{
+    border: 2px solid #fcc34f !important;
     color: #fcc34f !important;
 }
-.bookNow:hover{
-    border: 2px solid #fcc34f; 
+.Booking:hover{
+    border: 2px solid #fcc34f !important;
     color: #fcc34f !important;
 }

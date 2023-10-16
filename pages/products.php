@@ -33,13 +33,13 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="products.php" class="nav-link text-white">Products</a>
+                        <a href="products.php" class="nav-link text-white Products">Products</a>
                     </li>
                     <li class="nav-item">
                         <a href="about.php" class="nav-link text-white">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="book.php" class="nav-link text-white bookNow">Book Now</a>
+                        <a href="book.php" class="nav-link text-white Booking">Book Now</a>
                     </li>
                     <li class="nav-item">
                         <a href="login.php" class="nav-link text-white">
@@ -68,15 +68,19 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
 
             while ($prods = mysqli_fetch_array($result)) { ?>
                 <form action="get" action="products.php?id=<?= $prods['id'] ?>">
-                <div class="card">
-                    <img src="img/<?= $prods['image'] ?>" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h4><?= $prods['name'] ?></h4>
-                            <p><?= $prods['price'] ?></p>
+                    <div class="card">
+                        <img src="img/<?= $prods['image'] ?>" alt="">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h4>
+                                    <?= $prods['name'] ?>
+                                </h4>
+                                <p>
+                                    <?= $prods['price'] ?>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </form>
             <?php }
             ?>

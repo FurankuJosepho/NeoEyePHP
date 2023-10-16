@@ -10,17 +10,17 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-	<link rel="stylesheet" href="css/header.css">
-	<link rel="stylesheet" href="css/home.css">
-	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/header.css?<?php echo time()?>">
+	<link rel="stylesheet" href="css/home.css?<?php echo time()?>">
+	<link rel="stylesheet" href="css/index.css?<?php echo time()?>">
+	<link rel="stylesheet" href="css/footer.css?<?php echo time()?>">
 	<title>Home</title>
 </head>
 
 <body>
 	<nav class="navbar navbar-expand-md">
 		<div class="container-fluid">
-			<a href="index.php" class="navbar-brand text-white NavTitle">
+			<a href="index.php" class="navbar-brand text-white NavTitle Home">
 				Neo Eye Optical Clinic
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
 						<a href="pages/about.php" class="nav-link text-white">About Us</a>
 					</li>
 					<li class="nav-item">
-						<a href="pages/book.php" class="nav-link text-white bookNow">Book Now</a>
+						<a href="pages/book.php" class="nav-link text-white Booking">Book Now</a>
 					</li>
 					<li class="nav-item">
 						<a href="pages/login.php" class="nav-link text-white">

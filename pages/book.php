@@ -10,10 +10,15 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/booking.css">
+    <link rel="stylesheet" href="../css/header.css?v=1">
+    <link rel="stylesheet" href="../css/index.css?<?php echo time()?>">
+    <link rel="stylesheet" href="../css/booking.css?<?php echo time()?>">
     <title>Book Now</title>
+    <style>
+        .bookNow:hover {
+            border: 2px solid #70ced0 !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,7 +42,7 @@
                         <a href="about.php" class="nav-link text-white">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="book.php" class="nav-link text-white bookNow">Book Now</a>
+                        <a href="book.php" class="nav-link text-white Booking">Book Now</a>
                     </li>
                     <li class="nav-item">
                         <a href="login.php" class="nav-link text-white">

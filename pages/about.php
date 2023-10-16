@@ -31,10 +31,10 @@
 						<a href="products.php" class="nav-link text-white">Products</a>
 					</li>
 					<li class="nav-item">
-						<a href="about.php" class="nav-link text-white">About Us</a>
+						<a href="about.php" class="nav-link text-white About">About Us</a>
 					</li>
 					<li class="nav-item">
-						<a href="book.php" class="nav-link text-white bookNow">Book Now</a>
+						<a href="book.php" class="nav-link text-white Booking">Book Now</a>
 					</li>
 					<li class="nav-item">
 						<a href="login.php" class="nav-link text-white">

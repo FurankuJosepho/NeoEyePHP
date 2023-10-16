@@ -1,8 +1,21 @@
 /* This style is for univesal style */
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.navbar-brand{
-    margin-left: 100px !important;
+.navbar-brand {
+  margin-left: 100px !important;
+}
+.About {
+  color: #fcc34f !important;
+}
+
+.Products {
+  color: #fcc34f !important;
+}
+.Home {
+  color: #fcc34f !important;
+}
+.Login {
+  color: #fcc34f !important;
 }

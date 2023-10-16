@@ -36,10 +36,10 @@
                         <a href="about.php" class="nav-link text-white">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="book.php" class="nav-link text-white bookNow">Book Now</a>
+                        <a href="book.php" class="nav-link text-white Booking">Book Now</a>
                     </li>
                     <li class="nav-item">
-                        <a href="login.php" class="nav-link text-white">
+                        <a href="login.php" class="nav-link text-white Login">
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
                                 class="bi bi-person-circle" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
