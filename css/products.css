@@ -1,0 +1,41 @@
+.leftRight{
+    display: flex;
+    border: 2px solid red;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px 1rem;
+}
+.left{
+    flex: 0.8;
+    margin-top: 30px;
+}
+.right{
+    display: flex;
+    flex: 2;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+}
+.cardContainer{
+    margin: 30px 0;
+}
+.card{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.bottom{
+    display: grid;
+    grid-template-columns: repeat(4,20rem);
+}
+.bottomdetails{
+    margin: 2rem;
+}
+.bottom .card{
+    margin:10px !important;
+    background-color: #70ced0 !important;
+    border: 0px solid #70ced0 !important;
+    flex-wrap: wrap;
+}

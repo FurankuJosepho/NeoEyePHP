@@ -10,15 +10,15 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-	<link rel="stylesheet" href="css/header.css?<?php echo time() ?>">
-	<link rel="stylesheet" href="css/home.css?<?php echo time() ?>">
-	<link rel="stylesheet" href="css/index.css?<?php echo time() ?>">
-	<link rel="stylesheet" href="css/footer.css?<?php echo time() ?>">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/footer.css">
 	<title>Home</title>
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-md">
+	<nav class="navbar navbar-expand-md sticky-top">
 		<div class="container-fluid">
 			<a href="index.php" class="navbar-brand text-white NavTitle Home">
 				Neo Eye Optical Clinic

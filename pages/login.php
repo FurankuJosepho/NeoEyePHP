@@ -13,14 +13,16 @@
 </head>
 
 <body>
- <nav class="navbar navbar-expand-md">
-  <div class="container-fluid">
-   <a href="../index.php" class="navbar-brand text-white">
-    Neo Eye Optical Clinic
-   </a>
-   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <i class="bi bi-list"></i>
-   </button>
+    <nav class="navbar navbar-expand-md sticky-top"">
+        <div class="container-fluid">
+            <a href="../index.php" class="navbar-brand text-white">
+                Neo Eye Optical Clinic
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
 
    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     <ul class="navbar-nav">
