@@ -10,9 +10,9 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/header.css?v=1">
-    <link rel="stylesheet" href="../css/index.css?<?php echo time()?>">
-    <link rel="stylesheet" href="../css/booking.css?<?php echo time()?>">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/booking.css">
     <title>Book Now</title>
     <style>
         .bookNow:hover {
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md">
+    <nav class="navbar navbar-expand-md sticky-top">
         <div class="container-fluid">
             <a href="../index.php" class="navbar-brand text-white">
                 Neo Eye Optical Clinic

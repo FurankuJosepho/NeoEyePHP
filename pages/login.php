@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md">
+    <nav class="navbar navbar-expand-md sticky-top"">
         <div class="container-fluid">
             <a href="../index.php" class="navbar-brand text-white">
                 Neo Eye Optical Clinic

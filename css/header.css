@@ -1,21 +1,21 @@
 nav {
-  background-color: #192e5b;
-}
-.navbar-toggler {
-  color: #ffff !important;
-  border-color: #ffff;
-}
-.nav-link {
-  padding: 7px;
-  margin: 0 10px;
-}
-.Booking {
-  border: 2px solid #fff;
-  border-radius: 10px;
-}
-.nav-link:hover {
-  color: #fcc34f !important;
-}
-.Booking:hover {
-  border: 2px solid #fcc34f !important;
-}
+    background-color: #192e5b;
+  }
+  .navbar-toggler {
+    color: #ffff !important;
+    border-color: #ffff;
+  }
+  .nav-link {
+    padding: 7px;
+    margin: 0 10px;
+  }
+  .Booking {
+    border: 2px solid #fff;
+    border-radius: 10px;
+  }
+  .nav-link:hover {
+    color: #fcc34f !important;
+  }
+  .Booking:hover {
+    border: 2px solid #fcc34f !important;
+  }
