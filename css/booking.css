@@ -1,23 +1,33 @@
-.btn{
-    border: 2px solid #192e5b;
-    color: #192e5b;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --c-o: #fcc34f;
+  --c-db: #192e5b;
+  --c-sb: #70ced0;
+  --c-w: #fff;
+  --f-p: 'Poppins';
 }
-.btn:hover{
-    border: 2px solid #192e5b;
-    color: #192e5b;
-    background-color:#fcc34f;
+
+.btn {
+  border: 2px solid #192e5b;
+  color: #192e5b;
 }
-.formContainer{
-    padding: 1.5rem 2rem;
-    margin: 2.5rem 1rem;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px #0000008a;
+.btn:hover {
+  border: 2px solid #192e5b;
+  color: #192e5b;
+  background-color: #fcc34f;
 }
-.Booking{
-    border: 2px solid #fcc34f !important;
-    color: #fcc34f !important;
+.formContainer {
+  padding: 1.5rem 2rem;
+  margin: 2.5rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px #0000008a;
 }
-.Booking:hover{
-    border: 2px solid #fcc34f !important;
-    color: #fcc34f !important;
+.Booking {
+  border: 2px solid #fcc34f !important;
+  color: #fcc34f !important;
+}
+.Booking:hover {
+  border: 2px solid #fcc34f !important;
+  color: #fcc34f !important;
 }

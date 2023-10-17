@@ -7,21 +7,22 @@
   --c-w: #fff;
   --f-p: 'Poppins';
 }
+
 .neoeye {
- width: 90%;
- margin: 15px auto;
+  width: 90%;
+  margin: 15px auto;
 }
 
 .neoeyes-container {
- display: flex;
- gap: 25px;
- margin-bottom: 50px;
+  display: flex;
+  gap: 25px;
+  margin-bottom: 50px;
 }
 
 .img-doctor {
- align-self: center;
- border-radius: 10px;
- width: 50%;
+  align-self: center;
+  border-radius: 10px;
+  width: 50%;
 }
 
 .neo {
@@ -36,8 +37,8 @@
   padding: 20px 0 20px 0;
 }
 
-.neo-text{
- text-align: center;
+.neo-text {
+  text-align: center;
 }
 
 .neo-para {
@@ -45,54 +46,54 @@
 }
 
 .neo-container1 {
- display: grid;
- grid-template-columns: 1fr 1fr;
- width: 90%;
- margin: auto;
- text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: auto;
+  text-align: center;
 }
 
 .experts {
- display: flex;
- flex-direction: column;
- width: 98%;
- margin: auto auto 20px auto;
- color: var(--c-db);
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  margin: auto auto 20px auto;
+  color: var(--c-db);
 }
 
-.expert-container{
- display: flex;
- justify-content: space-evenly;
+.expert-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .experts-contain {
- display: flex;
- flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .expert-name {
- color: var(--c-sb);
+  color: var(--c-sb);
 }
 
 .expert-text {
- text-align: center;
- margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .expert-img {
- height: 400px;
+  height: 400px;
 }
 
 .info-btn {
- padding: 10px;
- border-radius: 15px;
- color: var(--c-db);
- border: var(--c-db) solid 2px;
- background-color: var(--c-w);
+  padding: 10px;
+  border-radius: 15px;
+  color: var(--c-db);
+  border: var(--c-db) solid 2px;
+  background-color: var(--c-w);
 }
 
 .info-btn:hover {
- color: var(--c-o);
- border: var(--c-o) solid 2px;
+  color: var(--c-o);
+  border: var(--c-o) solid 2px;
 }

@@ -1,11 +1,24 @@
 /* This style is for univesal style */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --c-o: #fcc34f;
+  --c-db: #192e5b;
+  --c-sb: #70ced0;
+  --c-w: #fff;
+  --f-p: 'Poppins';
+}
+
 * {
   margin: 0;
   padding: 0;
 }
+
 .navbar-brand {
   margin-left: 100px !important;
 }
+
 .About {
   color: #fcc34f !important;
 }
@@ -13,9 +26,11 @@
 .Products {
   color: #fcc34f !important;
 }
+
 .Home {
   color: #fcc34f !important;
 }
+
 .Login {
   color: #fcc34f !important;
 }

@@ -10,10 +10,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-	<link rel="stylesheet" href="css/header.css?<?php echo time()?>">
-	<link rel="stylesheet" href="css/home.css?<?php echo time()?>">
-	<link rel="stylesheet" href="css/index.css?<?php echo time()?>">
-	<link rel="stylesheet" href="css/footer.css?<?php echo time()?>">
+	<link rel="stylesheet" href="css/header.css?<?php echo time() ?>">
+	<link rel="stylesheet" href="css/home.css?<?php echo time() ?>">
+	<link rel="stylesheet" href="css/index.css?<?php echo time() ?>">
+	<link rel="stylesheet" href="css/footer.css?<?php echo time() ?>">
 	<title>Home</title>
 </head>
 
@@ -88,6 +88,7 @@
 				care that goes beyond expectations.
 			</p>
 		</section>
+
 		<!-- service section -->
 		<section class="service-container">
 			<div class="service-contain">
@@ -117,6 +118,7 @@
 				</div>
 			</div>
 		</section>
+
 		<!-- testimonial section -->
 		<section class="testimonial-container">
 			<h2 class="testimonial-text">testimonial</h2>
@@ -147,60 +149,62 @@
 				</div>
 			</div>
 		</section>
-		<!-- footer section -->
-		<footer class="footer">
-			<article class="footer-row">
-				<div class="footer-col colsan">
-					<img class="logo" src="images/Logo.png" alt="NeoEye Logo" />
-				</div>
-				<div class="footer-col">
-					<div class="info-container">
-						<i class="fa-solid fa-location-dot location"></i>
-						<p class="address">
-							NeoVision Optical Building,
-							<br />
-							Malinao St., Malabo Mata,
-							<br />
-							Pulang-lupa, Phil.
-						</p>
-					</div>
-					<div class="info-container">
-						<i class="fa-solid fa-phone phone"></i>
-						<p class="pNumber">(632) 8988-7000</p>
-					</div>
-					<div class="info-container">
-						<i class="fa-solid fa-envelope envelope"></i>
-						<p class="eMail">neoeye@gmail.com</p>
-					</div>
-				</div>
-				<div class="footer-col">
-					<div class="service-container">
-						<h4 class="customer-service">services</h4>
-						<ul class="links">
-							<li class="link">Consultation/Diagnostics</li>
-							<li class="link">Eye care services</li>
-							<li class="link">Eyewears</li>
-						</ul>
-					</div>
-					<div class="aboutUs-container">
-						<h4 class="about-us">about us</h4>
-						<ul class="links">
-							<li class="link">Mission and Vision</li>
-							<li class="link">Board of Directors</li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer-col">
-					<h4 class="connect">connect</h4>
-					<div class="social-container">
-						<i class="fa-brands fa-facebook"></i>
-						<i class="fa-brands fa-instagram"></i>
-					</div>
-				</div>
-			</article>
-			<p class="copyright">&copy; 2023. all rights reserved.</p>
-		</footer>
 	</main>
+	
+	<!-- footer section -->
+	<footer class="footer">
+		<article class="footer-row">
+			<div class="footer-col colsan">
+				<img class="logo" src="images/Logo.png" alt="NeoEye Logo" />
+			</div>
+			<div class="footer-col">
+				<div class="info-container">
+					<i class="fa-solid fa-location-dot location"></i>
+					<p class="address">
+						NeoVision Optical Building,
+						<br />
+						Malinao St., Malabo Mata,
+						<br />
+						Pulang-lupa, Phil.
+					</p>
+				</div>
+				<div class="info-container">
+					<i class="fa-solid fa-phone phone"></i>
+					<p class="pNumber">(632) 8988-7000</p>
+				</div>
+				<div class="info-container">
+					<i class="fa-solid fa-envelope envelope"></i>
+					<p class="eMail">neoeye@gmail.com</p>
+				</div>
+			</div>
+			<div class="footer-col">
+				<div class="service-container">
+					<h4 class="customer-service">services</h4>
+					<ul class="links">
+						<li class="link">Consultation/Diagnostics</li>
+						<li class="link">Eye care services</li>
+						<li class="link">Eyewears</li>
+					</ul>
+				</div>
+				<div class="aboutUs-container">
+					<h4 class="about-us">about us</h4>
+					<ul class="links">
+						<li class="link">Mission and Vision</li>
+						<li class="link">Board of Directors</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-col">
+				<h4 class="connect">connect</h4>
+				<div class="social-container">
+					<i class="fa-brands fa-facebook"></i>
+					<i class="fa-brands fa-instagram"></i>
+				</div>
+			</div>
+		</article>
+		<p class="copyright">&copy; 2023. all rights reserved.</p>
+	</footer>
+
 	<script>
 		const swiper = new Swiper('.swiper', {
 			speed: 400,
@@ -220,6 +224,7 @@
 			}
 		});
 	</script>
+
 </body>
 
 </html>
