@@ -1,4 +1,5 @@
 <?php
+// This is forda connection on the databases
 $connect = mysqli_connect("localhost", "root", "", "neoeye");
 ?>
 <!DOCTYPE html>
@@ -74,13 +75,13 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <input type="checkbox">
-                                <label for="checkbox">₱ 0.00 - ₱ 500.00</label><br/>
+                                <label for="checkbox">₱ 0.00 - ₱ 500.00</label><br />
                                 <input type="checkbox">
-                                <label for="checkbox">₱ 501.00 - ₱ 1,000.00</label><br/>
+                                <label for="checkbox">₱ 501.00 - ₱ 1,000.00</label><br />
                                 <input type="checkbox">
-                                <label for="checkbox">₱ 1,001.00 - ₱ 2,000.00</label><br/>
+                                <label for="checkbox">₱ 1,001.00 - ₱ 2,000.00</label><br />
                                 <input type="checkbox">
-                                <label for="checkbox">₱ 2,000.00 and Above</label><br/>
+                                <label for="checkbox">₱ 2,000.00 and Above</label><br />
                             </div>
                         </div>
                     </div>
@@ -95,12 +96,12 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                            <input type="checkbox">
-                                <label for="checkbox">Anti-Radiation</label><br/>
                                 <input type="checkbox">
-                                <label for="checkbox">Multicoated</label><br/>
+                                <label for="checkbox">Anti-Radiation</label><br />
                                 <input type="checkbox">
-                                <label for="checkbox">Tinted</label><br/>
+                                <label for="checkbox">Multicoated</label><br />
+                                <input type="checkbox">
+                                <label for="checkbox">Tinted</label><br />
                             </div>
                         </div>
                     </div>
@@ -115,14 +116,14 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                            <input type="checkbox">
-                                <label for="checkbox">Acetate</label><br/>
                                 <input type="checkbox">
-                                <label for="checkbox">Metal</label><br/>
+                                <label for="checkbox">Acetate</label><br />
                                 <input type="checkbox">
-                                <label for="checkbox">Plastic</label><br/>
+                                <label for="checkbox">Metal</label><br />
                                 <input type="checkbox">
-                                <label for="checkbox">Stainless Steel</label><br/>
+                                <label for="checkbox">Plastic</label><br />
+                                <input type="checkbox">
+                                <label for="checkbox">Stainless Steel</label><br />
                             </div>
                         </div>
                     </div>
@@ -130,171 +131,28 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                 </div>
             </div>
             <div class="right cardContainer">
+                <?php
+                $query = "SELECT * FROM `products`";
+                $result = mysqli_query($connect, $query);
 
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
+                while ($prods = mysqli_fetch_array($result)) {
+                    ?>
+                    <div class="card">
+                        <img src="img/<?php echo $prods['image'] ?>" alt="">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h4>
+                                    <?php echo $prods['name'] ?>
+                                </h4>
+                                <p>
+                                    <?php echo $prods['price'] ?>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../images/JPG/Glasses.jpg" alt="">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h5>Almeira Pink</h5>
-                            <p>₱ 959.00</p>
-                            <button class="btn btn-primary">Buy</button>
-                        </div>
-                    </div>
-                </div>
+                    <?php
+                }
+                ?>
             </div>
 
             <div class="bottom">
@@ -322,7 +180,8 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                 <div class="card">
                     <div class="card-body">
                         <h5>SECURE PAYMENT</h5>
-                        <p>We assure our customers that the provided payments methods are safe. We guarantee protection for your bank accounts and information.</p>
+                        <p>We assure our customers that the provided payments methods are safe. We guarantee protection
+                            for your bank accounts and information.</p>
                     </div>
                 </div>
             </div>
