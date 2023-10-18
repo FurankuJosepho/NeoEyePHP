@@ -16,7 +16,7 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/products.css?v=1">
+    <link rel="stylesheet" href="../css/products.css?v=2">
     <title>Products</title>
 </head>
 
@@ -145,8 +145,11 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                                     <?php echo $prods['name'] ?>
                                 </h4>
                                 <p>
-                                    <?php echo $prods['price'] ?>
+                                    <?php
+                                    echo "₱";
+                                    echo $prods['price'] ?>
                                 </p>
+                                <button class="btn btn-primary">Buy</button>
                             </div>
                         </div>
                     </div>
