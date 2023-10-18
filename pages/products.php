@@ -96,12 +96,21 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <input type="checkbox">
-                                <label for="checkbox">Anti-Radiation</label><br />
-                                <input type="checkbox">
-                                <label for="checkbox">Multicoated</label><br />
-                                <input type="checkbox">
-                                <label for="checkbox">Tinted</label><br />
+                                <?php
+                                $material_query = "SELECT * FROM `lens`";
+                                $material_result = mysqli_query($connect, $material_query);
+
+                                if (mysqli_num_rows($material_result) > 0) {
+                                    foreach ($material_result as $materials) {
+                                        ?>
+                                        <input type="checkbox" name="materials[]" value="<?php echo $materials['id']; ?>">
+                                        <?php echo $materials['lensmat']; ?><br />
+                                        <?php
+                                    }
+                                }else{
+                                    echo "No Lens";
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -116,14 +125,21 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <input type="checkbox">
-                                <label for="checkbox">Acetate</label><br />
-                                <input type="checkbox">
-                                <label for="checkbox">Metal</label><br />
-                                <input type="checkbox">
-                                <label for="checkbox">Plastic</label><br />
-                                <input type="checkbox">
-                                <label for="checkbox">Stainless Steel</label><br />
+                                <?php
+                                $material_query = "SELECT * FROM `frames`";
+                                $material_result = mysqli_query($connect, $material_query);
+
+                                if (mysqli_num_rows($material_result) > 0) {
+                                    foreach ($material_result as $materials) {
+                                        ?>
+                                        <input type="checkbox" name="materials[]" value="<?php echo $materials['id']; ?>">
+                                        <?php echo $materials['framesmat']; ?><br />
+                                        <?php
+                                    }
+                                }else{
+                                    echo "No Frames";
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
