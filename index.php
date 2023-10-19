@@ -61,7 +61,7 @@
 	<!-- main section -->
 	<main class="main">
 		<!-- slider container under main section -->
-		<div class="swiper">
+		<div class="swiper carousel">
 			<div class="swiper-wrapper">
 				<!-- Slides -->
 				<div class="swiper-slide" data-swiper-autoplay="2000"><img src="images\JPG\slider1.jpg" alt="Slider 1">
@@ -76,8 +76,8 @@
 			<!-- pagination -->
 			<div class="swiper-pagination"></div>
 			<!-- navigation buttons -->
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev btn-prv"></div>
+			<div class="swiper-button-next btn-nxt"></div>
 		</div>
 
 		<!-- info section -->
