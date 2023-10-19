@@ -57,73 +57,74 @@
   </div>
  </nav>
 
- <!-- Body Section Pls put documentation in every section para hindi na sila mag hanap Bros paki lagay nlng comments -->
- <section class="container">
-  <form action="" class="justify-content-center formContainer">
-   <div class="row my-3">
-    <h3 class="d-flex justify-content-center">
-     Book Your Appointment
-    </h3>
-    <hr>
-   </div>
-   <div class="row mb-3">
-    <div class="col">
-     <input type="text" class="form-control text-center" placeholder="Enter your Firstname">
-    </div>
-    <div class="col">
-     <input type="text" class="form-control text-center" placeholder="Enter your Lastname">
-    </div>
-   </div>
-   <div class="row mb-3">
-    <div class="col">
-     <input type="email" class="form-control text-center" placeholder="Enter your Email">
-    </div>
-    <div class="col">
-     <input type="date" class="form-control text-center">
-    </div>
-   </div>
-   <div class="row mb-3">
-    <div class="col form-check d-flex justify-content-end me-5">
-     <input type="radio" class="form-check-input">
-     <label for="radioMale" class="form-check-label">Male</label>
-    </div>
-    <div class="col form-check ms-5">
-     <input type="radio" class="form-check-input">
-     <label for="radioFemale" class="form-check-label">Female</label>
-    </div>
-   </div>
-   <div class="row mb-3">
-    <div class="col">
-     <input type="number" class="form-control text-center" placeholder="Telephone Number">
-    </div>
-    <div class="col">
-     <input type="number" class="form-control text-center" placeholder="Phone Number">
-    </div>
-   </div>
-   <div class="row mb-3">
-    <input type="text" class="form-control text-center" placeholder="Enter your Address">
-   </div>
-   <div class="row mb-3">
-    <div class="col">
-     <input type="text" class="form-control text-center" placeholder="City">
-    </div>
-    <div class="col">
-     <input type="text" class="form-control text-center" placeholder="State">
-    </div>
-    <div class="col">
-     <input type="number" class="form-control text-center" placeholder="Zip Code">
-    </div>
-   </div>
-   <div class="row">
-    <div class="col  d-flex justify-content-end">
-     <button class="btn">Book Now</button>
-    </div>
-    <div class="col">
-     <button class="btn">Cancel</button>
-    </div>
-   </div>
-  </form>
- </section>
+    <!-- Body Section Pls put documentation in every section para hindi na sila mag hanap Bros paki lagay nlng comments -->
+    <section class="container">
+        <form action="" class="justify-content-center formContainer">
+            <div class="row my-3">
+                <h3 class="d-flex justify-content-center">
+                    Book Your Appointment
+                </h3>
+                <hr>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <input type="text" class="form-control text-center" placeholder="Enter your Firstname">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control text-center" placeholder="Enter your Lastname">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <input type="email" class="form-control text-center" placeholder="Enter your Email">
+                </div>
+                <div class="col">
+                    <input type="date" class="form-control text-center">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col form-check d-flex justify-content-end me-5">
+                    <input type="radio" class="form-check-input">
+                    <label for="radioMale" class="form-check-label">Male</label>
+                </div>
+                <div class="col form-check ms-5">
+                    <input type="radio" class="form-check-input">
+                    <label for="radioFemale" class="form-check-label">Female</label>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <input type="number" class="form-control text-center" placeholder="Telephone Number">
+                </div>
+                <div class="col">
+                    <input type="number" class="form-control text-center" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <input type="text" class="form-control text-center" placeholder="Enter your Address">
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <input type="text" class="form-control text-center" placeholder="City">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control text-center" placeholder="State">
+                </div>
+                <div class="col">
+                    <input type="number" class="form-control text-center" placeholder="Zip Code">
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col  d-flex justify-content-end">
+                    <button class="btn">Book Now</button>
+                </div>
+                <div class="col">
+                    <button class="btn">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </section>
 </body>
 
 </html>
