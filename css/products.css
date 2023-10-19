@@ -10,7 +10,6 @@
 
 .leftRight{
     display: flex;
-    border: 2px solid red;
     justify-content: center;
     flex-wrap: wrap;
     margin: 15px 1rem;
@@ -20,6 +19,10 @@
     flex: 0.6;
     margin-top: 30px;
     justify-content: center;
+}
+.left .accordion-item .accordion-header .accordion-button{
+    background-color: var( --c-b);
+    color: var( --c-w);
 }
 .right{
     display: flex;
@@ -41,6 +44,7 @@
     text-align: center;
     flex-direction: column;
     width: 13rem;
+    max-height: 20rem;
 }
 .bottom{
     display: grid;
@@ -51,8 +55,51 @@
 }
 .bottom .card{
     margin:10px !important;
-    background-color: #70ced0 !important;
-    border: 0px solid #70ced0 !important;
+    background-color:var(--c-b) !important;
+    border: 0px solid var(--c-b) !important;
+    color:var(--c-w) ;
     flex-wrap: wrap;
     text-align: center;
 }
+.bottom .card .card-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.bottom .card .card-body p{
+    color:var(--c-w) ;
+}
+.btn-book{
+    width: 250px;
+    border-radius: 25px;
+    border: var(--c-db) solid 1px;
+    color: var(--c-w);
+    background-color: var(--c-db);
+}
+.btn-book:hover {
+    color: var(--c-db);
+    background-color: var(--c-v);
+    transition: 0.2s ease-in-out;
+  } 
+  .right .card .card-body {
+    background-color: var(--c-b);
+    width: 13rem;
+    border-radius: 0 0 5px 5px;
+    color: var(--c-w);
+  }
+  .right .card .card-body p {
+    color: var(--c-w);
+  }
+.btn-buy {
+    border-radius: 25px;
+    border: var(--c-db) solid 1px;
+    color: var(--c-w);
+    background-color: var(--c-db);
+    width: 10rem;
+}
+.btn-buy:hover {
+    color: var(--c-db);
+    background-color: var(--c-v);
+    transition: 0.2s ease-in-out;
+  } 

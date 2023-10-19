@@ -70,7 +70,7 @@
 				</div>
 				<div class="swiper-slide"><img src="images/JPG/slider2.jpg" alt="Slider 2"></div>
 				<div class="swiper-slide"><img src="images/JPG/slider3.jpg" alt="Slider 3">
-					<button class="btn-book">Book Now</button>
+					<a class="btn-book btn" href="pages/book.php">Book Now</a>
 				</div>
 			</div>
 			<!-- pagination -->
