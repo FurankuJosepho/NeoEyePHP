@@ -3,34 +3,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --c-o: #fcc34f;
-  --c-db: #192e5b;
-  --c-sb: #70ced0;
-  --c-w: #fff;
+  --c-b: #3D71AC;
+  --c-v: #AF66A8;
+  --c-w: #EFFBFF;
+  --c-db: #192E5B;
   --f-p: 'Poppins';
 }
 
 * {
+  font-family: var(--f-p);
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  color: var(--c-db);
 }
 
-.navbar-brand {
-  margin-left: 100px !important;
+body {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.About {
-  color: #fcc34f !important;
+footer {
+  margin-top: auto;
 }
 
-.Products {
-  color: #fcc34f !important;
-}
-
-.Home {
-  color: #fcc34f !important;
-}
-
-.Login {
-  color: #fcc34f !important;
-}

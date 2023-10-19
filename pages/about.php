@@ -164,7 +164,7 @@
 	</main>
 	
 	<!-- the footer section -->
-	<footer class="footer">
+	<footer>
 		<article class="footer-row">
 			<div class="footer-col colsan">
 				<img class="logo" src="../images/Logo.png" alt="NeoEye Logo" />
