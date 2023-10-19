@@ -16,7 +16,7 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/products.css?v=2">
+    <link rel="stylesheet" href="../css/products.css?v=3">
     <title>Products</title>
 </head>
 
@@ -60,116 +60,238 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
 
     <!-- Body Section Pls put documentation in every section para hindi na sila mag hanap Bros paki lagay nlng comments -->
 
-    <div class="container-fluid">
+    <div class="container-fluid-lg">
         <div class="leftRight">
             <div class="left">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <h5>PRICE RANGE</h5>
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <input type="checkbox">
-                                <label for="checkbox">₱ 0.00 - ₱ 500.00</label><br />
-                                <input type="checkbox">
-                                <label for="checkbox">₱ 501.00 - ₱ 1,000.00</label><br />
-                                <input type="checkbox">
-                                <label for="checkbox">₱ 1,001.00 - ₱ 2,000.00</label><br />
-                                <input type="checkbox">
-                                <label for="checkbox">₱ 2,000.00 and Above</label><br />
+                <form action="" method="GET">
+                    <button class="btn my-2" type="submit">Filter</button>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <h5>PRICE RANGE</h5>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <input type="checkbox" name="price_range" value="under_501" />
+                                    <label for="checkbox">₱ 0.00 - ₱ 500.00</label><br />
+                                    <input type="checkbox" name="price_range" value="502_to_1001" />
+                                    <label for="checkbox">₱ 501.00 - ₱ 1,000.00</label><br />
+                                    <input type="checkbox" name="price_range" value="over_1002" />
+                                    <label for="checkbox">₱ 1,001.00 - ₱ 2,000.00</label><br />
+                                    <input type="checkbox" name="price_range" value="over_2001" />
+                                    <label for="checkbox">₱ 2,000.00 and Above</label><br />
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <h5>LENS MATERIALS</h5>
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <?php
-                                $material_query = "SELECT * FROM `lens`";
-                                $material_result = mysqli_query($connect, $material_query);
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <h5>LENS MATERIALS</h5>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <?php
+                                    $material_query = "SELECT * FROM `lens`";
+                                    $material_result = mysqli_query($connect, $material_query);
 
-                                if (mysqli_num_rows($material_result) > 0) {
-                                    foreach ($material_result as $materials) {
-                                        ?>
-                                        <input type="checkbox" name="materials[]" value="<?php echo $materials['id']; ?>">
-                                        <?php echo $materials['lensmat']; ?><br />
-                                        <?php
+                                    if (mysqli_num_rows($material_result) > 0) {
+                                        foreach ($material_result as $materials) {
+                                            $matCheck = [];
+                                            if (isset($_GET["materials"])) {
+                                                $matCheck = $_GET['materials'];
+                                            }
+                                            ?>
+                                            <input type="checkbox" name="materials[]" value="<?php echo $materials['id']; ?>"
+                                                <?php
+                                                if (in_array($materials['id'], $matCheck)) {
+                                                    echo "This item is Selected";
+                                                }
+                                                ?> />
+                                            <?php echo $materials['lensmat']; ?><br />
+                                            <?php
+                                        }
+                                    } else {
+                                        echo "No Lens";
                                     }
-                                }else{
-                                    echo "No Lens";
-                                }
-                                ?>
+                                    ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <h5>FRAMES MATERIALS</h5>
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <?php
-                                $material_query = "SELECT * FROM `frames`";
-                                $material_result = mysqli_query($connect, $material_query);
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <h5>FRAMES MATERIALS</h5>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <?php
+                                    $frames_query = "SELECT * FROM `frames`";
+                                    $frames_result = mysqli_query($connect, $frames_query);
 
-                                if (mysqli_num_rows($material_result) > 0) {
-                                    foreach ($material_result as $materials) {
-                                        ?>
-                                        <input type="checkbox" name="materials[]" value="<?php echo $materials['id']; ?>">
-                                        <?php echo $materials['framesmat']; ?><br />
-                                        <?php
+                                    if (mysqli_num_rows($frames_result) > 0) {
+                                        foreach ($frames_result as $frames) {
+                                            ?>
+                                            <input type="checkbox" name="frames[]" value="<?php echo $frames['id']; ?>">
+                                            <?php echo $frames['framesmat']; ?><br />
+                                            <?php
+                                        }
+                                    } else {
+                                        echo "No Frames";
                                     }
-                                }else{
-                                    echo "No Frames";
-                                }
-                                ?>
+                                    ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
+                    </div>
+                </form>
             </div>
             <div class="right cardContainer">
                 <?php
-                $query = "SELECT * FROM `products`";
-                $result = mysqli_query($connect, $query);
+                if (isset($_GET['price_range'])) {
+                    $checkprice = $_GET['price_range'];
+                    $query = "";
 
-                while ($prods = mysqli_fetch_array($result)) {
-                    ?>
-                    <div class="card">
-                        <img src="img/<?php echo $prods['image'] ?>" alt="">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <h4>
-                                    <?php echo $prods['name'] ?>
-                                </h4>
-                                <p>
-                                    <?php
-                                    echo "₱";
-                                    echo $prods['price'] ?>
-                                </p>
-                                <button class="btn btn-primary">Buy</button>
+                    if ($checkprice == "under_501") {
+                        $query = $connect->query("SELECT * FROM `products` WHERE `price` BETWEEN 0 AND 500");
+                    } elseif ($checkprice == "502_to_1001") {
+                        $query = $connect->query("SELECT * FROM `products` WHERE `price` BETWEEN 501 AND 1000");
+                    } elseif ($checkprice == "over_1002") {
+                        $query = $connect->query("SELECT * FROM `products` WHERE `price` BETWEEN 1001 AND 2000");
+                    } elseif ($checkprice == "over_2001") {
+                        $query = $connect->query("SELECT * FROM `products` WHERE `price` BETWEEN 2000 AND 5000");
+                    } else {
+                        $query = $connect->query("SELECT * FROM `products`");
+                    }
+
+                    if ($query->num_rows > 0) {
+                        while ($prods = $query->fetch_assoc()) {
+                            ?>
+                            <div class="card">
+                                <img src="img/<?php echo $prods['image'] ?>" alt="">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h4>
+                                            <?php echo $prods['name'] ?>
+                                        </h4>
+                                        <p>
+                                            <?php
+                                            echo "₱";
+                                            echo $prods['price'] ?>
+                                        </p>
+                                        <button class="btn">Buy</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    } else {
+                        echo 'No item';
+                    }
+                } elseif (isset($_GET["materials"])) {
+                    $materialcheck = [];
+                    $materialcheck = $_GET["materials"];
+                    // Lens Materials for each of the items in the filter sectioning
+                    foreach ($materialcheck as $checkmat) {
+                        $query = "SELECT * FROM `products` WHERE `lens_id` IN ($checkmat)";
+                        $result = mysqli_query($connect, $query);
+
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($prods = mysqli_fetch_array($result)) {
+                                ?>
+                                <div class="card">
+                                    <img src="img/<?php echo $prods['image'] ?>" alt="">
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            <h4>
+                                                <?php echo $prods['name'] ?>
+                                            </h4>
+                                            <p>
+                                                <?php
+                                                echo "₱";
+                                                echo $prods['price'] ?>
+                                            </p>
+                                            <button class="btn">Buy</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php
+                            }
+                        } else {
+                            echo 'No item';
+                        }
+                    }
+                }elseif (isset($_GET["frames"])) {
+                    $framescheck = $_GET["frames"]; // Access the "frames" parameter
+                    $framescheck = is_array($framescheck) ? $framescheck : [$framescheck]; // Ensure it's an array
+                
+                    // Frames Materials for each of the items in the filter section
+                    foreach ($framescheck as $checkframes) {
+                        $query = "SELECT * FROM `products` WHERE `frames_id` = $checkframes"; // Use '=' instead of 'IN' for single frame ID
+                        $result = mysqli_query($connect, $query);
+                
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($prods = mysqli_fetch_array($result)) {
+                                ?>
+                                <div class="card">
+                                    <img src="img/<?php echo $prods['image'] ?>" alt="">
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            <h4>
+                                                <?php echo $prods['name'] ?>
+                                            </h4>
+                                            <p>
+                                                <?php
+                                                echo "₱" . $prods['price']; // Concatenate currency symbol and price
+                                                ?>
+                                            </p>
+                                            <button class="btn">Buy</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php
+                            }
+                        } else {
+                            echo 'No item';
+                        }
+                    }
+                }
+                else {
+                    $query = "SELECT * FROM `products`";
+                    $result = mysqli_query($connect, $query);
+
+                    while ($prods = mysqli_fetch_array($result)) {
+                        ?>
+                        <div class="card">
+                            <img src="img/<?php echo $prods['image'] ?>" alt="">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>
+                                        <?php echo $prods['name'] ?>
+                                    </h4>
+                                    <p>
+                                        <?php
+                                        echo "₱";
+                                        echo $prods['price'] ?>
+                                    </p>
+                                    <button class="btn">Buy</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <?php
+                        <?php
+                    }
                 }
                 ?>
             </div>
