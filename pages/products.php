@@ -19,7 +19,7 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
     <link rel="stylesheet" href="../css/header.css?v=1">
     <link rel="stylesheet" href="../css/index.css?v=1">
 	<link rel="stylesheet" href="../css/footer.css?v=1">
-    <link rel="stylesheet" href="../css/products.css?v=3">
+    <link rel="stylesheet" href="../css/products.css?v=4">
     <title>Products</title>
 </head>
 
@@ -55,12 +55,12 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
 			</div>
 		</div>
 	</nav>
-    
+
     <div class="container-fluid-lg">
         <div class="leftRight">
             <div class="left">
                 <form action="" method="GET">
-                    <button class="btn my-2" type="submit">Filter</button>
+                    <button class="btn my-2 btn-book" type="submit">Filter</button>
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
@@ -186,7 +186,7 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                                             echo "₱";
                                             echo $prods['price'] ?>
                                         </p>
-                                        <button class="btn">Buy</button>
+                                        <button class="btn btn-buy">Reserve</button>
                                     </div>
                                 </div>
                             </div>
@@ -218,7 +218,7 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                                                 echo "₱";
                                                 echo $prods['price'] ?>
                                             </p>
-                                            <button class="btn">Buy</button>
+                                            <button class="btn btn-buy">Reserve</button>
                                         </div>
                                     </div>
                                 </div>
@@ -231,7 +231,6 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                 }elseif (isset($_GET["frames"])) {
                     $framescheck = $_GET["frames"]; // Access the "frames" parameter
                     $framescheck = is_array($framescheck) ? $framescheck : [$framescheck]; // Ensure it's an array
-                
                     // Frames Materials for each of the items in the filter section
                     foreach ($framescheck as $checkframes) {
                         $query = "SELECT * FROM `products` WHERE `frames_id` = $checkframes"; // Use '=' instead of 'IN' for single frame ID
@@ -252,7 +251,7 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                                                 echo "₱" . $prods['price']; // Concatenate currency symbol and price
                                                 ?>
                                             </p>
-                                            <button class="btn">Buy</button>
+                                            <button class="btn btn-buy">Reserve</button>
                                         </div>
                                     </div>
                                 </div>
@@ -281,7 +280,7 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                                         echo "₱";
                                         echo $prods['price'] ?>
                                     </p>
-                                    <button class="btn">Buy</button>
+                                    <button class="btn btn-buy">Reserve</button>
                                 </div>
                             </div>
                         </div>
@@ -323,6 +322,42 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
             </div>
         </div>
     </div>
+
+    <!-- footer section -->
+	<footer>
+		<article class="footer-row">
+			<div class="info-container">
+				<img class="logo" src="../images/PNG/Neoeye Optical Clinic - W.png" alt="NeoEye Logo" />
+			</div>
+			<div class="info-container">
+				<i class="fa-solid fa-location-dot location"></i>
+				<p class="address">
+					NeoVision Optical Building,
+					<br />
+					Malinao St., Malabo Mata,
+					<br />
+					Pulang-lupa, Phil.
+				</p>
+			</div>
+			<div class="info-container">
+				<i class="fa-solid fa-phone phone"></i>
+				<p class="pNumber">(632) 8988-7000</p>
+			</div>
+			<div class="info-container">
+				<i class="fa-solid fa-envelope envelope"></i>
+				<p class="eMail">neoeye@gmail.com</p>
+			</div>
+
+			<div class="footer-con">
+				<h4 class="connect">connect</h4>
+				<div class="social-container">
+					<i class="fa-brands fa-facebook"></i>
+					<i class="fa-brands fa-instagram"></i>
+				</div>
+			</div>
+		</article>
+		<p class="copyright">&copy; 2023. all rights reserved.</p>
+	</footer>
 </body>
 
 </html>

@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="../css/header.css">
 	<link rel="stylesheet" href="../css/index.css">
 	<link rel="stylesheet" href="../css/about.css">
-	<link rel="stylesheet" href="../css/footer.css">
+	<link rel="stylesheet" href="../css/footer.css?v=1">
 	<title>About Us</title>
 </head>
 
@@ -166,50 +166,32 @@
 		</section>
 	</main>
 	
-	<!-- the footer section -->
+	<!-- footer section -->
 	<footer>
 		<article class="footer-row">
-			<div class="footer-col colsan">
-				<img class="logo" src="../images/Logo.png" alt="NeoEye Logo" />
+			<div class="info-container">
+				<img class="logo" src="../images/PNG/Neoeye Optical Clinic - W.png" alt="NeoEye Logo" />
 			</div>
-			<div class="footer-col">
-				<div class="info-container">
-					<i class="fa-solid fa-location-dot location"></i>
-					<p class="address">
-						NeoVision Optical Building,
-						<br />
-						Malinao St., Malabo Mata,
-						<br />
-						Pulang-lupa, Phil.
-					</p>
-				</div>
-				<div class="info-container">
-					<i class="fa-solid fa-phone phone"></i>
-					<p class="pNumber">(632) 8988-7000</p>
-				</div>
-				<div class="info-container">
-					<i class="fa-solid fa-envelope envelope"></i>
-					<p class="eMail">neoeye@gmail.com</p>
-				</div>
+			<div class="info-container">
+				<i class="fa-solid fa-location-dot location"></i>
+				<p class="address">
+					NeoVision Optical Building,
+					<br />
+					Malinao St., Malabo Mata,
+					<br />
+					Pulang-lupa, Phil.
+				</p>
 			</div>
-			<div class="footer-col">
-				<div class="service-container">
-					<h4 class="customer-service">services</h4>
-					<ul class="links">
-						<li class="link">Consultation/Diagnostics</li>
-						<li class="link">Eye care services</li>
-						<li class="link">Eyewears</li>
-					</ul>
-				</div>
-				<div class="aboutUs-container">
-					<h4 class="about-us">about us</h4>
-					<ul class="links">
-						<li class="link">Mission and Vision</li>
-						<li class="link">Board of Directors</li>
-					</ul>
-				</div>
+			<div class="info-container">
+				<i class="fa-solid fa-phone phone"></i>
+				<p class="pNumber">(632) 8988-7000</p>
 			</div>
-			<div class="footer-col">
+			<div class="info-container">
+				<i class="fa-solid fa-envelope envelope"></i>
+				<p class="eMail">neoeye@gmail.com</p>
+			</div>
+
+			<div class="footer-con">
 				<h4 class="connect">connect</h4>
 				<div class="social-container">
 					<i class="fa-brands fa-facebook"></i>
