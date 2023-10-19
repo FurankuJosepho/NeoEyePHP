@@ -18,10 +18,10 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 	<!-- css link -->
-	<link rel="stylesheet" href="css/header.css">
-	<link rel="stylesheet" href="css/home.css">
-	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/header.css?v=1">
+	<link rel="stylesheet" href="css/home.css?v=1">
+	<link rel="stylesheet" href="css/index.css?v=1">
+	<link rel="stylesheet" href="css/footer.css?v=1">
 	<title>Home</title>
 </head>
 
@@ -32,7 +32,6 @@
 			<a href="index.php" class="navbar-brand nav-link home-active">
 				Neoeye Optical Clinic
 			</a>
-			<img src="images/PNG/Neoeye Optical Clinic Logo.png" alt="Logo">
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<i class="bi bi-list"></i>
 			</button>
@@ -65,7 +64,7 @@
 		<div class="swiper">
 			<div class="swiper-wrapper">
 				<!-- Slides -->
-				<div class="swiper-slide" data-swiper-autoplay="2000"><img src="images/JPG/slider1.jpg" alt="Slider 1">
+				<div class="swiper-slide" data-swiper-autoplay="2000"><img src="images\JPG\slider1.jpg" alt="Slider 1">
 					<h1 class="tagline-header">See Clearly and Confidently</h1>
 					<p class="tagline-para">Experience top-quality eye care and feel assured with our expert doctors at Neoeye Optical Clinic.</p>
 				</div>
