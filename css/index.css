@@ -1,21 +1,32 @@
 /* This style is for univesal style */
-* {
-  margin: 0;
-  padding: 0;
-}
-.navbar-brand {
-  margin-left: 100px !important;
-}
-.About {
-  color: #fcc34f !important;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --c-b: #3D71AC;
+  --c-v: #AF66A8;
+  --c-w: #EFFBFF;
+  --c-db: #192E5B;
+  --f-p: 'Poppins';
 }
 
-.Products {
-  color: #fcc34f !important;
+* {
+  font-family: var(--f-p);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--c-db);
 }
-.Home {
-  color: #fcc34f !important;
+
+body {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
-.Login {
-  color: #fcc34f !important;
+
+footer {
+  margin-top: auto;
 }
+

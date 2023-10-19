@@ -1,51 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --c-o: #fcc34f;
+  --c-b: #3d71ac;
+  --c-v: #af66a8;
+  --c-w: #effbff;
   --c-db: #192e5b;
-  --c-sb: #70ced0;
-  --c-w: #fff;
   --f-p: 'Poppins';
 }
 
-.footer {
-  color: var(--c-w);
+footer {
   background-color: var(--c-db);
+  padding: 10px;
 }
 
-.footer .footer-row {
+.nav-container img {
+  display: none;
+}
+
+.footer-row {
+  width: 95%;
+  margin: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 5px 50px;
+  padding: 10px;
 }
 
-.colsan{
- display: flex;
- align-items: center;
-}
-
-.footer-col {
-  width: 250px;
-}
-
-.footer ul,
+footer ul,
 .social-container {
   margin: 5px 0;
   padding: 0;
 }
 
-.footer ul li {
+footer ul li {
   list-style: none;
 }
 
-.footer .logo {
+footer .logo {
   width: 135px;
 }
 
 .info-container {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
+}
+
+.pNumber,
+.address,
+.connect,
+.eMail,
+.copyright,
+.location,
+.phone,
+.envelope,
+.social-container i {
+  color: var(--c-w);
+}
+
+.connect {
+  text-transform: uppercase;
 }
 
 .location,
@@ -55,21 +69,35 @@
   margin-bottom: 15px;
 }
 
-.customer-service,
-.about-us,
-.connect {
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-
 .social-container i {
   padding-right: 10px;
   font-size: 1.5em;
 }
 
 .copyright {
-  background-color: var(--c-w);
-  color: var(--c-db);
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 425px) {
+  /* .nav-container img {
+    display: block;
+    width: 70px;
+  }
+
+  .nav-container a {
+    display: none;
+  } */
+
+  .footer-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info-container {
+    margin: 10px;
+  }
 }

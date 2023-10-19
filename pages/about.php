@@ -83,6 +83,7 @@
 				<img class="img-doctor" src="../images/JPG/about_us.jpg" alt="Doctor with stethoscope" />
 			</div>
 		</section>
+
 		<!-- the why choose neoeye section -->
 		<section class="neo">
 			<div class='neo-containers'>
@@ -129,6 +130,7 @@
 				</div>
 			</div>
 		</section>
+
 		<!-- the experts section -->
 		<section class="experts">
 			<h2 class='expert-text'>Meet Our Experts</h2>
@@ -160,8 +162,9 @@
 			</div>
 		</section>
 	</main>
+	
 	<!-- the footer section -->
-	<footer class="footer">
+	<footer>
 		<article class="footer-row">
 			<div class="footer-col colsan">
 				<img class="logo" src="../images/Logo.png" alt="NeoEye Logo" />
