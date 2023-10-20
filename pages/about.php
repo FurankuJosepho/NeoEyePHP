@@ -4,18 +4,27 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	 <!-- bootstrap link -->
-	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+	<!-- favicon -->
+	<link rel="icon" type="image/x-icon" href="../images/PNG/Neoeye Optical Clinic Logo.png">
+
+	<!-- bootstrap link -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+	<!-- swiper js link -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<!-- css link -->
 	<link rel="stylesheet" href="../css/header.css">
-	<link rel="stylesheet" href="../css/index.css">
 	<link rel="stylesheet" href="../css/about.css">
-	<link rel="stylesheet" href="../css/footer.css?v=1">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/footer.css">
 	<title>About Us</title>
 </head>
 
@@ -33,10 +42,10 @@
 				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a href="products.php" class="nav-link">Products</a>
+							<a href="products.php" class="nav-link product-active">Products</a>
 						</li>
 						<li class="nav-item">
-							<a href="about.php" class="nav-link">About Us</a>
+							<a href="about.php" class="nav-link about-us-active">About Us</a>
 						</li>
 						<li class="nav-item">
 							<a href="book.php" class="nav-link book">Book Now</a>
@@ -56,43 +65,27 @@
 	<main class="main">
 		<!-- Intro to about section -->
 		<section class="neoeye">
-			<h1 class="neoeye-header">About NeoEye Optical</h1>
 			<div class="neoeyes-container">
 				<div class="neoeye-container">
+					<h1 class="neoeye-header">Neoeye Optical Clinic: Where Your Eyes Come First</h1>
 					<p class="neoeye-para">
-						Welcome to NeoEye Optical Clinic, a leading name in the
-						Philippines' eye care landscape. Our dedicated team of experienced
-						doctors is committed to providing top-tier eye care services to
-						our valued patients. Our approach revolves around delivering
-						personalized, patient-centered care that caters to the unique
-						needs of every individual.
+						Welcome to Neoeye Optical Clinic, a trusted name in the field of eye care in the Philippines. With a team of dedicated doctors, we are committed to providing high-quality eye care services to our valued patients.
 					</p>
 					<p class="neoeye-para">
-						At NeoEye, we merge our years of expertise with the latest in eye
-						care technology to diagnose and treat a wide range of eye
-						conditions. Whether you require a routine eye examination,
-						precision contact lens fittings, or specialized treatment for an
-						eye ailment, we're here to serve you with the utmost
-						professionalism and knowledge. Our mission is not only to
-						safeguard and improve your eye health but also to empower you
-						through informed decision-making, as we believe that well-informed
-						patients are more likely to achieve the best outcomes. NeoEye
-						Optical Clinic isn't just a place for eye care – it's a sanctuary
-						where expertise and compassion merge to enhance your vision and
-						protect your ocular well-being. We invite you to experience the
-						NeoEye difference.
+						At our clinic we believe in delivering personalized care and attention to each individual. Our experienced doctors utilize the latest technology and techniques to diagnose and treat various eye conditions. whether you need a routine eye examination, contact lenses, or treatment for an eye disease, we are here to serve you with utmost professionalism and expertise.
 					</p>
 				</div>
-				<img class="img-doctor" src="../images/JPG/about_us.jpg" alt="Doctor with stethoscope" />
+				<img class="img-doctor" src="../images/PNG/about_us.png" alt="Doctor with stethoscope" />
 			</div>
 		</section>
 
 		<!-- the why choose neoeye section -->
 		<section class="neo">
+			<h2 class="neo-text">Why Neoeye Optical Clinic?</h2>
 			<div class='neo-containers'>
+				<img class="img-girl" src="../images/PNG/girl_wearing_glasses.png" alt="Girl with glasses">
 				<div class="neo-container">
-					<h2 class="neo-text">Why NeoEye Optical?</h2>
-					<p class="neo-para">
+					<p class="neo-para paragraph">
 						We do optical care differently here. We'll give you service with a
 						smile, while giving you something to smile about. We know that
 						some people dread the dentist, but that's a thing of the past at
@@ -100,35 +93,39 @@
 						mind, to our commitment to comfort, everything we do is about
 						serving you!
 					</p>
-				</div>
-				<div class="neo-container1">
-					<div class="neo-item">
-						<h3>Empathy</h3>
-						<p>
-							Our ability to understand and relate to emotions and concerns of
-							our patients.
-						</p>
-					</div>
-					<div class="neo-item">
-						<h3>Esthetics</h3>
-						<p>
-							Our promise to deliver natural appearing results for a long
-							lasting healthy smile.
-						</p>
-					</div>
-					<div class="neo-item">
-						<h3>Ethical</h3>
-						<p>
-							Our unbiased explanation of associated risk, benefits and costs
-							of treatment.
-						</p>
-					</div>
-					<div class="neo-item">
-						<h3>Exceptional</h3>
-						<p>
-							Our commitment to the highest level of professionalism and
-							competency.
-						</p>
+					<div class="neo-ethics">
+						<div class="neo-ethic">
+							<div class="neo-item">
+								<h5>Empathy</h5>
+								<p class="neo-para">
+									Our ability to understand and relate to emotions and concerns of
+									our patients.
+								</p>
+							</div>
+							<div class="neo-item">
+								<h5>Esthetics</h5>
+								<p class="neo-para">
+									Our promise to deliver natural appearing results for a long
+									lasting healthy smile.
+								</p>
+							</div>
+						</div>
+						<div class="neo-ethic">
+							<div class="neo-item">
+								<h5>Ethical</h5>
+								<p class="neo-para">
+									Our unbiased explanation of associated risk, benefits and costs
+									of treatment.
+								</p>
+							</div>
+							<div class="neo-item">
+								<h5>Exceptional</h5>
+								<p class="neo-para">
+									Our commitment to the highest level of professionalism and
+									competency.
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -142,30 +139,26 @@
 					<img class="expert-img" src="../images/PNG/Dr.Jimbo.png" alt="" />
 					<h3 class="profession">Opthalmologist</h3>
 					<h4 class="expert-name">Dr. Jimbo</h4>
-					<button class="info-btn">More Info</button>
 				</div>
 				<div class="experts-contain">
 					<img class="expert-img" src="../images/PNG/Dr.Nimpha.png" alt="" />
 					<h3 class="profession">Opthalmologist</h3>
 					<h4 class="expert-name">Dr. Nimpha</h4>
-					<button class="info-btn">More Info</button>
 				</div>
 				<div class="experts-contain">
 					<img class="expert-img" src="../images/PNG/Dr.Tonio.png" alt="" />
 					<h3 class="profession">Opthalmologist</h3>
 					<h4 class="expert-name">Dr. Tonio</h4>
-					<button class="info-btn">More Info</button>
 				</div>
 				<div class="experts-contain">
 					<img class="expert-img" src="../images/PNG/Dr.Donatello.png" alt="" />
 					<h3 class="profession">Opthalmologist</h3>
 					<h4 class="expert-name">Dr. Donatello</h4>
-					<button class="info-btn">More Info</button>
 				</div>
 			</div>
 		</section>
 	</main>
-	
+
 	<!-- footer section -->
 	<footer>
 		<article class="footer-row">

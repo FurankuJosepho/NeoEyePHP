@@ -5,6 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!-- favicon -->
+	<link rel="icon" type="image/x-icon" href="images/PNG/Neoeye Optical Clinic Logo.png">
+
 	<!-- bootstrap link -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -39,10 +42,10 @@
 				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a href="pages/products.php" class="nav-link">Products</a>
+							<a href="pages/products.php" class="nav-link product-active">Products</a>
 						</li>
 						<li class="nav-item">
-							<a href="pages/about.php" class="nav-link">About Us</a>
+							<a href="pages/about.php" class="nav-link about-us-active">About Us</a>
 						</li>
 						<li class="nav-item">
 							<a href="pages/book.php" class="nav-link book">Book Now</a>
@@ -64,13 +67,13 @@
 		<div class="swiper carousel">
 			<div class="swiper-wrapper">
 				<!-- Slides -->
-				<div class="swiper-slide" data-swiper-autoplay="2000"><img src="images\JPG\slider1.jpg" alt="Slider 1">
-					<h1 class="tagline-header">See Clearly and Confidently</h1>
-					<p class="tagline-para">Experience top-quality eye care and feel assured with our expert doctors at Neoeye Optical Clinic.</p>
+				<div class="swiper-slide" data-swiper-autoplay="2000"><img src="images/JPG/slider3.jpg" alt="Slider 3">
+					<a class="btn-book btn" href="pages/book.php">Book Now</a>
 				</div>
 				<div class="swiper-slide"><img src="images/JPG/slider2.jpg" alt="Slider 2"></div>
-				<div class="swiper-slide"><img src="images/JPG/slider3.jpg" alt="Slider 3">
-					<a class="btn-book btn" href="pages/book.php">Book Now</a>
+				<div class="swiper-slide"><img src="images\JPG\slider1.jpg" alt="Slider 1">
+					<h1 class="tagline-header">See Clearly and Confidently</h1>
+					<p class="tagline-para">Experience top-quality eye care and feel assured with our expert doctors at Neoeye Optical Clinic.</p>
 				</div>
 			</div>
 			<!-- pagination -->
@@ -83,7 +86,7 @@
 		<!-- info section -->
 		<section class="paragraph-container">
 			<p class="paragraph-item1">
-				Introducing NeoEye Optical Clinic - the leading destination for
+				Introducing Neoeye Optical Clinic - the leading destination for
 				exceptional eye care in the Philippines. Our team of highly skilled
 				doctors is dedicated to providing top-notch vision solutions and
 				personalized care to every patient who walks through our doors. With a
@@ -97,7 +100,7 @@
 				lens fittings, and treatment for various eye conditions. Whether you
 				need a routine check-up or specialized care, our experienced doctors
 				will ensure that you receive the highest level of care tailored to
-				your unique needs. Trust NeoEye Optical Clinic for exceptional eye
+				your unique needs. Trust Neoeye Optical Clinic for exceptional eye
 				care that goes beyond expectations.
 			</p>
 		</section>
@@ -129,14 +132,14 @@
 						</div>
 					</div>
 					<div class="card-container">
-						<img class="card-img" src="images/JPG/Eyewears.jpg" alt="Spot Vision Screener" />
+						<img class="card-img" src="images/JPG/Spot_Vision_Screener.jpg" alt="Spot Vision Screener" />
 						<div class='service'>
 							<h5 class="sevice-item">spot vision screener</h5>
 							<p>Handheld vision screening device that detect vision issues on patients from 6 months of age through adult.</p>
 						</div>
 					</div>
 					<div class="card-container">
-						<img class="card-img" src="images/JPG/Eyewears.jpg" alt="Spot Vision Screener" />
+						<img class="card-img" src="images/JPG/Stereopsis_Test.jpg" alt="Stereopsis Test" />
 						<div class='service'>
 							<h5 class="sevice-item">stereopsis test</h5>
 							<p>Slightly different images are shown to each eye, such that a 3D image is perceived in case stereovision is present.</p>
@@ -156,7 +159,7 @@
 						<p class="rate">
 							<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
 						</p>
-						<p class="testi-para">NeoEye Optical Clinic is the best! The doctors are knowledgeable and friendly. They made me feel comfortable and answered all my questions. I highly recommend them for all your eye care needs. Thank you for the great service!</p>
+						<p class="testi-para">Neoeye Optical Clinic is the best! The doctors are knowledgeable and friendly. They made me feel comfortable and answered all my questions. I highly recommend them for all your eye care needs. Thank you for the great service!</p>
 						<h5>-Lena</h5>
 					</div>
 					<div class="swiper-slide"><img class="img-testi" src="images/JPG/3.jpg" alt="Frank">
