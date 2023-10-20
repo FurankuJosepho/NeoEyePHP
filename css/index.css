@@ -3,10 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --c-b: #3D71AC;
-  --c-v: #AF66A8;
-  --c-w: #EFFBFF;
-  --c-db: #192E5B;
+  --c-b: #3d71ac;
+  --c-v: #af66a8;
+  --c-w: #effbff;
+  --c-db: #192e5b;
   --f-p: 'Poppins';
 }
 
@@ -24,9 +24,9 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
+  background-color: var(--c-w);
 }
 
 footer {
   margin-top: auto;
 }
-
