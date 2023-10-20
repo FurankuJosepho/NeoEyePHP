@@ -35,7 +35,9 @@
 			<a href="../index.php" class="navbar-brand nav-link home-active">
 				Neoeye Optical Clinic
 			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
 				<i class="bi bi-list"></i>
 			</button>
 			<div class="page-container">
@@ -51,9 +53,17 @@
 							<a href="book.php" class="nav-link book">Book Now</a>
 						</li>
 						<li class="nav-item">
-							<a href="login.php" class="nav-link path">
-								<i class="fa-regular fa-circle-user path"></i>
-							</a>
+							<div class="dropdown">
+								<button class="nav-link path btn dropdown-toggle" type="button"
+									data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="fa-regular fa-circle-user path"></i>
+								</button>
+								<ul class="dropdown-menu">
+									<!-- Dropdown menu links -->
+									<li><a class="dropdown-item" href="../php/adminlogin.php">Admin</a></li>
+									<li><a class="dropdown-item" href="../php/userlogin.php">Login</a></li>
+								</ul>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -158,6 +168,7 @@
 			</div>
 		</section>
 	</main>
+
 
 	<!-- footer section -->
 	<footer>
