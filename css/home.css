@@ -133,7 +133,6 @@
 .rate span {
   color: #ffc100;
 }
-
 @media screen and (max-width: 1024px) {
   .tagline-header {
     top: 125px;

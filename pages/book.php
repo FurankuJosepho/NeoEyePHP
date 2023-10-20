@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/booking.css">
+    <link rel="stylesheet" href="../css/booking.css?v=1">
     <title>Book Now</title>
 </head>
 
@@ -48,10 +48,17 @@
                             <a href="book.php" class="nav-link book">Book Now</a>
                         </li>
                         <li class="nav-item">
-                            <a href="login.php" class="nav-link path">
-                                <i class="fa-regular fa-circle-user path"></i>
-                            </a>
-                        </li>
+							<div class="dropdown">
+								<button class="nav-link path btn dropdown-toggle" type="button"
+									data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="fa-regular fa-circle-user path"></i>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="../php/adminlogin.php">Admin</a></li>
+									<li><a class="dropdown-item" href="../php/userlogin.php">Users</a></li>
+								</ul>
+							</div>
+						</li>
                     </ul>
                 </div>
             </div>
@@ -118,10 +125,10 @@
             <hr>
             <div class="row">
                 <div class="col  d-flex justify-content-end">
-                    <button class="btn">Book Now</button>
+                    <button class="btn btns">Book Now</button>
                 </div>
                 <div class="col">
-                    <button class="btn">Cancel</button>
+                    <button class="btn btns">Cancel</button>
                 </div>
             </div>
         </form>
