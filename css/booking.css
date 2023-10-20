@@ -8,11 +8,11 @@
   --f-p: 'Poppins';
 }
 
-.btn {
+.btns {
   border: 2px solid #192e5b;
   color: #192e5b;
 }
-.btn:hover {
+.btns:hover {
   border: 2px solid #192e5b;
   color: #192e5b;
   background-color: #fcc34f;
