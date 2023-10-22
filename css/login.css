@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --c-b: #3d71ac;
+  --c-v: #af66a8;
+  --c-w: #effbff;
+  --c-db: #192e5b;
+  --f-p: 'Poppins';
+}
+
+.adminlogin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-section,
+form {
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  height: 250px;
+  margin: 0;
+}
+
+h1 {
+  margin: 10px auto;
+}
+
+.fullname,
+.username,
+.password,
+.btn {
+  margin: 15px;
+}
+
+.username,
+.password, .fullname {
+  border: none;
+  outline: none;
+  color: var(--c-b);
+  background-color: var(--c-w);
+  border-bottom: solid var(--c-db);
+  padding: 5px 10px;
+}
+
+::placeholder {
+  color: var(--c-b);
+}
+
+.img-logo {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+hr {
+  width: 50%;
+  height: 5px;
+  color: var(--c-v);
+}
+
+.login-btn {
+  width: 150px;
+  color: var(--c-w);
+  background-color: var(--c-db);
+}
+
+.cancel-btn {
+  width: 150px;
+  color: var(--c-w);
+  background-color: var(--c-v);
+}
+
+.login-btn:hover {
+  border: var(--c-db) solid 1px;
+}
+
+.cancel-btn:hover {
+  border: var(--c-v) solid 1px;
+  color: var(--c-v);
+}
+
+.link {
+  color: var(--c-b);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--c-v);
+}
+
+@media screen and (max-width: 768px) {
+  .adminlogin {
+    height: 100vh;
+    display: flex;
+    background-image: linear-gradient(45deg, var(--c-b), var(--c-v));
+  }
+
+  .img-gif {
+    display: none;
+  }
+
+  .form-section {
+    margin: 25px auto;
+    width: 400px;
+    height: 650px;
+    background-color: var(--c-w);
+    border-radius: 15px;
+    box-shadow: 1px 1px 12px 4px var(--c-db);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .adminlogin {
+    background-image: none;
+  }
+
+  .form-section{
+   box-shadow: none;
+  }
+}
