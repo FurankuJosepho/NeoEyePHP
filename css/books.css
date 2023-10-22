@@ -1,33 +1,176 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --c-b: #3D71AC;
-  --c-v: #AF66A8;
-  --c-w: #EFFBFF;
-  --c-db: #192E5B;
+  --c-b: #3d71ac;
+  --c-v: #af66a8;
+  --c-w: #effbff;
+  --c-db: #192e5b;
   --f-p: 'Poppins';
 }
 
-.btns {
-  border: 2px solid #192e5b;
-  color: #192e5b;
+.book-appoint {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-.btns:hover {
-  border: 2px solid #192e5b;
-  color: #192e5b;
-  background-color: #fcc34f;
+
+.form-section,
+form {
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.formContainer {
-  padding: 1.5rem 2rem;
-  margin: 2.5rem 1rem;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px #0000008a;
+
+form {
+  height: 500px;
+  margin: 0;
 }
-.Booking {
-  border: 2px solid #fcc34f !important;
-  color: #fcc34f !important;
+
+hr {
+  width: 50%;
+  height: 2px;
+  background: var(--c-v);
+  margin: 0;
 }
-.Booking:hover {
-  border: 2px solid #fcc34f !important;
-  color: #fcc34f !important;
+
+.header {
+  margin: 10px auto;
+}
+
+.gender {
+  display: flex;
+  margin: 0;
+}
+
+.fullname,
+.email,
+.number,
+.address,
+.note,
+.btn {
+  margin: 10px;
+}
+
+.fullname,
+.email,
+.time,
+.date,
+.number,
+.address,
+.note {
+  border-radius: 5px;
+  outline: none;
+  color: var(--c-b);
+  background-color: var(--c-w);
+  border: solid var(--c-db) 1px;
+  padding: 5px 10px;
+}
+
+::placeholder {
+  color: var(--c-b);
+}
+
+.login-btn {
+  width: 150px;
+  color: var(--c-w);
+  background-color: var(--c-db);
+}
+
+.cancel-btn {
+  width: 150px;
+  color: var(--c-w);
+  background-color: var(--c-v);
+}
+
+.login-btn:hover {
+  border: var(--c-db) solid 1px;
+}
+
+.cancel-btn:hover {
+  border: var(--c-v) solid 1px;
+  color: var(--c-v);
+}
+
+.date,
+.time {
+  margin: 10px 15px;
+}
+
+.text-gen,
+.radio,
+.label {
+  margin-bottom: 0;
+}
+
+.gender {
+  position: relative;
+  right: 45px;
+}
+
+.radio {
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.address,
+.note {
+  width: 337px;
+  resize: none;
+}
+
+input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+@media screen and (max-width: 768px) {
+  .book-appoint {
+    height: 100vh;
+    display: flex;
+    background-image: linear-gradient(45deg, var(--c-b), var(--c-v));
+  }
+
+  .img-gif {
+    display: none;
+  }
+
+  .form-section {
+    margin: 25px auto;
+    width: 400px;
+    height: 650px;
+    background-color: var(--c-w);
+    border-radius: 15px;
+    box-shadow: 1px 1px 12px 4px var(--c-db);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .book-appoint {
+    background-image: none;
+  }
+
+  .form-section {
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  hr {
+    margin-bottom: 10px;
+  }
+
+  .time {
+    width: 133px;
+  }
+
+  .date {
+    width: 160px;
+  }
+
+  .date,
+  .time {
+    margin: 10px 15px;
+  }
 }

@@ -1,105 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --c-b: #3D71AC;
-  --c-v: #AF66A8;
-  --c-w: #EFFBFF;
-  --c-db: #192E5B;
+  --c-b: #3d71ac;
+  --c-v: #af66a8;
+  --c-w: #effbff;
+  --c-db: #192e5b;
   --f-p: 'Poppins';
 }
 
-.leftRight{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 15px 1rem;
+.leftRight {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 15px 1rem;
 }
-.left{
-    display: flex;
-    flex: 0.6;
-    margin-top: 30px;
-    justify-content: center;
+.left {
+  display: flex;
+  flex: 0.6;
+  margin-top: 30px;
+  justify-content: center;
 }
-.left .accordion-item .accordion-header .accordion-button{
-    background-color: var( --c-b);
-    color: var( --c-w);
+.left .accordion-item .accordion-header .accordion-button {
+  background-color: var(--c-b);
+  color: var(--c-w);
 }
-.right{
-    display: flex;
-    flex: 2;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 13px;
+.right {
+  display: flex;
+  flex: 2;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
 }
-.cardContainer{
-    margin: 30px 0;
+.cardContainer {
+  margin: 30px 0;
 }
-.card img{
-    width: 10rem !important;
+.card img {
+  width: 10rem !important;
 }
-.right .card{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    width: 13rem;
-    max-height: 20rem;
+.right .card {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 13rem;
+  max-height: 20rem;
 }
-.bottom{
-    display: grid;
-    grid-template-columns: repeat(4,20rem);
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 20rem);
 }
-.bottomdetails{
-    margin: 2rem;
+.bottomdetails {
+  margin: 2rem;
 }
-.bottom .card{
-    margin:10px !important;
-    background-color:var(--c-b) !important;
-    border: 0px solid var(--c-b) !important;
-    color:var(--c-w) ;
-    flex-wrap: wrap;
-    text-align: center;
+.bottom .card {
+  margin: 10px !important;
+  background-color: var(--c-b) !important;
+  border: 0px solid var(--c-b) !important;
+  color: var(--c-w);
+  flex-wrap: wrap;
+  text-align: center;
 }
 .bottom .card .card-body {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
-.bottom .card .card-body p{
-    color:var(--c-w) ;
+.bottom .card .card-body p {
+  color: var(--c-w);
 }
-.btn-book{
-    width: 250px;
-    border-radius: 25px;
-    border: var(--c-db) solid 1px;
-    color: var(--c-w);
-    background-color: var(--c-db);
+.btn-book {
+  width: 250px;
+  border-radius: 25px;
+  border: var(--c-db) solid 1px;
+  color: var(--c-w);
+  background-color: var(--c-db);
 }
 .btn-book:hover {
-    color: var(--c-db);
-    background-color: var(--c-v);
-    transition: 0.2s ease-in-out;
-  } 
-  .right .card .card-body {
-    background-color: var(--c-b);
-    width: 13rem;
-    border-radius: 0 0 5px 5px;
-    color: var(--c-w);
-  }
-  .right .card .card-body p {
-    color: var(--c-w);
-  }
+  color: var(--c-db);
+  background-color: var(--c-v);
+  transition: 0.2s ease-in-out;
+}
+.right .card .card-body {
+  background-color: var(--c-b);
+  width: 13rem;
+  border-radius: 0 0 5px 5px;
+  color: var(--c-w);
+}
+.right .card .card-body p {
+  color: var(--c-w);
+}
 .btn-buy {
-    border-radius: 25px;
-    border: var(--c-db) solid 1px;
-    color: var(--c-w);
-    background-color: var(--c-db);
-    width: 10rem;
+  border-radius: 25px;
+  border: var(--c-db) solid 1px;
+  color: var(--c-w);
+  background-color: var(--c-db);
+  width: 10rem;
 }
 .btn-buy:hover {
-    color: var(--c-db);
-    background-color: var(--c-v);
-    transition: 0.2s ease-in-out;
-  } 
+  color: var(--c-db);
+  background-color: var(--c-v);
+  transition: 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+  .bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
