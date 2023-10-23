@@ -55,7 +55,7 @@ include("../include/connect.php");
 							echo '<p class="alert alert-danger" style="display: block; margin: 0; padding: 6px;">Password doesnt match</p>';
 						}
 					}else{
-						echo '<p class="alert alert-danger" style="display: block; margin: 0; padding: 6px;">Email doenst match</p>';
+						echo '<p class="alert alert-danger" style="display: block; margin: 0; padding: 6px;">Email doesnt match</p>';
 					}
 				}
 				?>
