@@ -14,7 +14,7 @@ $sql = "INSERT INTO `book`(`name`, `email`, `time`, `date`, `gender`, `number`, 
 
 $connect->query($sql) or die($connect->error);
 
-echo header("Location: admin.php");
+echo header("Location: ../index.php");
 }
 ?>
 

@@ -83,7 +83,7 @@
 			<div class="swiper-wrapper">
 				<!-- Slides -->
 				<div class="swiper-slide"><img src="images/JPG/slider3.jpg" alt="Slider 1">
-					<a class="btn-book btn" href="pages/book.php">Book Now</a>
+					<a class="btn-book btn" href="pages/books.php">Book Now</a>
 				</div>
 				<div class="swiper-slide" data-swiper-autoplay="2000"><img src="images\JPG\slider1.jpg" alt="Slider 2">
 					<h1 class="tagline-header">See Clearly and Confidently</h1>
