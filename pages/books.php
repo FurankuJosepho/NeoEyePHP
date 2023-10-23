@@ -1,10 +1,20 @@
 <?php
+include("../include/connect.php");
 if(isset($_POST['submit'])){
 $fname = $_POST['name'];
 $email = $_POST['email'];
 $time = $_POST['time'];
-}else{
-  echo'something wrong';
+$date = $_POST['date'];
+$gender = $_POST['gender'];
+$pnumber = $_POST['number'];
+$address = $_POST['address'];
+$mednote = $_POST['note'];
+
+$sql = "INSERT INTO `book`(`name`, `email`, `time`, `date`, `gender`, `number`, `address`, `notes`) VALUES ('".$fname."','".$email."','".$time."','".$date."','".$gender."','".$pnumber."','".$address."','".$mednote."')";
+
+$connect->query($sql) or die($connect->error);
+
+echo header("Location: admin.php");
 }
 ?>
 
@@ -61,7 +71,7 @@ $time = $_POST['time'];
         <input type="email" class="email" name="email" placeholder="Email">
         <div class="data-time">
           <input type="time" name="time" class="time">
-          <input type="date" class="date">
+          <input type="date" name="date" class="date">
         </div>
         <div class="gender">
           <p class="text-gen">Gender:</p>
@@ -70,9 +80,9 @@ $time = $_POST['time'];
           <input type="radio" class="form-check-input radio" id="radioFemale" name="gender">
           <label for="radioFemale" class="form-check-label label">Female</label>
         </div>
-        <input type="number" class="number" placeholder="Phone Number">
-        <textarea class="address" placeholder="Address"></textarea>
-        <textarea class="note" placeholder="Medical Note"></textarea>
+        <input type="number" class="number" name="number" placeholder="Phone Number">
+        <textarea class="address" name="address" placeholder="Address"></textarea>
+        <textarea class="note" name="note" placeholder="Medical Note"></textarea>
         <div class="btn-logs">
           <input class="btn login-btn" type="submit" name="submit" value="SET">
           <a class="btn cancel-btn" href="../index.php" role="button">CANCEL</a>
