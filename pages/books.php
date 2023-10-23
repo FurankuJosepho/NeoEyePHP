@@ -3,8 +3,6 @@ if(isset($_POST['submit'])){
 $fname = $_POST['name'];
 $email = $_POST['email'];
 $time = $_POST['time'];
-}else{
-  echo'something wrong';
 }
 ?>
 
