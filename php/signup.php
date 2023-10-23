@@ -35,6 +35,32 @@ include("../include/connect.php");
 </head>
 
 <body>
+ <main class="adminlogin">
+  <section class="img-section">
+   <img class="img-gif" src="../images/GIF/signup.gif" alt="gif Image">
+  </section>
+  <section class="form-section">
+   <img class="img-logo" src="../images/PNG/Neoeye Optical Clinic Logo.png" alt="Neoeye Optical Clinic Logo">
+   <h5>Neoeye Optical Clinic</h5>
+   <h1>CREATE ACCOUNT</h1>
+   <form method="POST">
+    <input class="fullname" type="text" name="fname" placeholder="Fullname">
+    <input class="email" type="text" name="email" placeholder="Email">
+    <input class="username" type="text" name="name" placeholder="Username">
+    <input class="password" type="password" name="pass" placeholder="Password">
+    <div class="btn-logs">
+     <input class="btn login-btn" type="submit" name="Login" value="SIGNUP">
+     <a class="btn cancel-btn" href="../index.php" role="button">CANCEL</a>
+    </div>
+    <div class="check-box">
+     <input type="checkbox" name="check">
+     <label class="check-text" for="check">I accept the Terms of Use & Privacy Policy</label>
+    </div>
+   </form>
+   <hr>
+   <p class="signup">Already have an account? <a class="link" href="../php/adminlogin.php">Login here</a></p>
+  </section>
+ </main>
     <main class="adminlogin">
         <section class="img-section">
             <img class="img-gif" src="#" alt="anything related in clinic">

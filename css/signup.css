@@ -13,6 +13,13 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.img-gif {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(105%);
+}
+
 .form-section,
 form {
   height: 100vh;
