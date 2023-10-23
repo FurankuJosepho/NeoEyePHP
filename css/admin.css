@@ -1,5 +1,24 @@
 .navbar-nav {
-    display: flex;
-    align-items: center;
-    margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+th {
+  text-align: center;
+  border: solid 1px var(--c-db);
+}
+
+.td-container:nth-child(even) {
+  background-color: var(--c-v);
+  color: var(--c-db);
+}
+
+.th-container {
+  background-color: var(--c-b);
+  color: var(--c-db);
+}
+
+table {
+  margin: 20px;
 }

@@ -39,7 +39,7 @@ hr {
   width: 50%;
   height: 2px;
   background: var(--c-v);
-  margin: 0;
+  margin-bottom: 20px;
 }
 
 .header {
@@ -101,9 +101,21 @@ hr {
   color: var(--c-v);
 }
 
+.time {
+  width: 135px;
+}
+
+.date {
+  width: 155px;
+}
+
 .date,
 .time {
   margin: 10px 15px;
+}
+
+.text-gen {
+  margin-left: 10px;
 }
 
 .text-gen,
@@ -124,7 +136,7 @@ hr {
 
 .address,
 .note {
-  width: 337px;
+  width: 325px;
   resize: none;
 }
 
@@ -166,15 +178,20 @@ input::-webkit-inner-spin-button {
 
 @media screen and (max-width: 320px) {
   hr {
+    margin-top: 10px;
     margin-bottom: 10px;
   }
 
   .time {
-    width: 133px;
+    width: 120px;
   }
 
   .date {
     width: 160px;
+  }
+
+  .text-gen {
+    margin-left: 20px;
   }
 
   .date,
