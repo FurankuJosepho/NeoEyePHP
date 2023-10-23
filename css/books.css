@@ -66,7 +66,8 @@ hr {
 .date,
 .number,
 .address,
-.note {
+.note,
+#gender {
   border-radius: 5px;
   outline: none;
   color: var(--c-b);
@@ -74,6 +75,13 @@ hr {
   border: solid var(--c-db) 1px;
   padding: 5px 10px;
   width: 91%;
+}
+
+#gender {
+width: 200px;
+position: relative;
+margin: 10px auto;
+left: 75px;
 }
 
 ::placeholder {
@@ -115,7 +123,9 @@ hr {
 }
 
 .text-gen {
-  margin-left: 10px;
+  position: relative;
+  margin-top: 15px;
+  left: 15px;
 }
 
 .text-gen,
@@ -191,7 +201,11 @@ input::-webkit-inner-spin-button {
   }
 
   .text-gen {
-    margin-left: 20px;
+    margin-left: 10px;
+  }
+
+  #gender {
+    left: 65px;
   }
 
   .date,
