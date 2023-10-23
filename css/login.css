@@ -1,11 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
   --c-b: #3d71ac;
   --c-v: #af66a8;
   --c-w: #effbff;
   --c-db: #192e5b;
-  --f-p: 'Poppins';
+  --f-p: "Poppins";
+}
+
+.alert {
+  padding: 6px !important;
+  margin-bottom: 0 !important;
 }
 
 .adminlogin {

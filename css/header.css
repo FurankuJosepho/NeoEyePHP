@@ -11,6 +11,18 @@
 nav {
   background-color: var(--c-b);
 }
+.dropdown-toggle{
+  display: flex;
+  align-items: center;
+  position: relative;
+  bottom: 8px;
+}
+.profile-pic{
+  width: 45px;
+  padding: 5px;
+  background-color: #effbff;
+  border-radius: 50%;
+}
 
 .nav-container {
   width: 97%;

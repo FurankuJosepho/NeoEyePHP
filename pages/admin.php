@@ -17,7 +17,7 @@ if (isset($_SESSION['admin'])){
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="data.php" class="nav-link">'.$user.'</a>
+                            <a href="../pages/admin.php" class="nav-link">Doctor '.$user.'</a>
                         </li>
                         <li class="nav-item">
                             <a href="../php/adminlogout.php" class="nav-link">Logout</a>
@@ -28,6 +28,36 @@ if (isset($_SESSION['admin'])){
         </div>
     </nav>
     ';
+}
+
+$message = '';
+
+if (isset($_POST["submit"])) {
+    $folder = "img/" . basename($_FILES['images']['name']); // Use 'images' instead of 'image'
+    $prodname = $_POST['name'];
+    $prodprice = $_POST['price'];
+
+    // Use $_FILES['images']['tmp_name'] for the uploaded file
+    $prodimage = $_FILES['images']['tmp_name'];
+
+    // You should use prepared statements to prevent SQL injection
+    $sql = "INSERT INTO `products` (`name`, `price`, `image`) VALUES (?, ?, ?)";
+
+    $stmt = mysqli_prepare($connect, $sql);
+    mysqli_stmt_bind_param($stmt, "sss", $prodname, $prodprice, $folder);
+
+    if (mysqli_stmt_execute($stmt)) {
+        if (move_uploaded_file($_FILES['images']['tmp_name'], $folder)) {
+            $message = 'Uploaded Success';
+        } else {
+            $message = 'Uploaded Not Success';
+        }
+    } else {
+        $message = 'Error: ' . mysqli_error($connect);
+    }
+
+    mysqli_stmt_close($stmt);
+    mysqli_close($connect);
 }
 ?>
 <!DOCTYPE html>
@@ -56,11 +86,18 @@ if (isset($_SESSION['admin'])){
     <!-- css link -->
     <link rel="stylesheet" href="../css/header.css?v=1">
     <link rel="stylesheet" href="../css/index.css?v=1">
+    <link rel="stylesheet" href="../css/admin.css?v=1">
     <title>Admin</title>
 </head>
 
 <body>
     <h1>Hello <?php echo $user;?></h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Prod Name">
+        <input type="text" name="price" placeholder="Prod Price">
+        <input type="file" name="images">
+        <input type="submit" name="submit" value="Upload">
+    </form>
 </body>
 
 </html>

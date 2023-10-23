@@ -58,16 +58,9 @@ if (isset($_POST["Login"])) {
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <!-- css link -->
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/login.css?v=1">
     <link rel="stylesheet" href="../css/index.css">
     <title>Login Admin</title>
-    <style>
-        .alert {
-            display:
-                <?php echo empty($show) ? 'none' : 'block'; ?>;
-            ;
-        }
-    </style>
 </head>
 
 <body>
@@ -97,8 +90,6 @@ if (isset($_POST["Login"])) {
                 </div>
                 <a class="link" href="#">Forgot password?</a>
             </form>
-            <hr>
-            <p class="signup">Don't have an account? <a class="link" href="../php/signup.php">Sign Up</a></p>
         </section>
     </main>
 </body>

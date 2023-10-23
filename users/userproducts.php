@@ -1,6 +1,23 @@
 <?php
 // This is forda connection on the databases
 $connect = mysqli_connect("localhost", "root", "", "neoeye");
+
+session_start();
+if (!isset($_SESSION["users"])) {
+    header("Location: ../php/userlogin.php");
+}
+if (isset($_SESSION['users'])) {
+	$user = $_SESSION['users'];
+
+	function getProfilePicture($name)
+	{
+		$name_slice = explode(' ', $name);
+		$name_slice = array_filter($name_slice);
+		$initials = '';
+		$initials = (isset($name_slice[0])) ? strtoupper($name_slice[0][0]) : '';
+		return '<div class="profile-pic">' . $initials . '</div>';
+	}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +37,7 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/header.css?v=1">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/products.css">
@@ -31,7 +48,7 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
     <!-- navigation section -->
     <nav class="navbar navbar-expand-md sticky-top">
         <div class="container-fluid nav-container">
-            <a href="../index.php" class="navbar-brand nav-link home-active">
+            <a href="userindex.php" class="navbar-brand nav-link home-active">
                 Neoeye Optical Clinic
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,22 +58,24 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="products.php" class="nav-link">Products</a>
+                            <a href="userproducts.php" class="nav-link">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a href="about.php" class="nav-link">About Us</a>
+                            <a href="userabout.php" class="nav-link">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a href="books.php" class="nav-link book">Book Now</a>
+                            <a href="userbooks.php" class="nav-link book">Book Now</a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
                                 <button class="nav-link path btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa-regular fa-circle-user path"></i>
+                                <?php
+									echo getProfilePicture($user)
+										?>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="../php/adminlogin.php">Admin</a></li>
-                                    <li><a class="dropdown-item" href="../php/userlogin.php">Users</a></li>
+                                    <li><a class="dropdown-item" href="userprofile.php">Profile</a></li>
+                                    <li><a class="dropdown-item" href="../php/userlogout.php">Logout</a></li>
 
                                 </ul>
                             </div>
