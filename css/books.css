@@ -66,6 +66,7 @@ hr {
   background-color: var(--c-w);
   border: solid var(--c-db) 1px;
   padding: 5px 10px;
+  width: 91%;
 }
 
 ::placeholder {

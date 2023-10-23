@@ -1,3 +1,6 @@
+<?php
+include("../include/connect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +36,29 @@
 			<h5>Neoeye Optical Clinic</h5>
 			<h1>Welcome</h1>
 			<form method="POST">
+				<?php
+				if (isset($_POST['Login'])) {
+					$uname = $_POST['name'];
+					$pass = $_POST['pass'];
+
+					$sql = "SELECT * FROM `users` WHERE `username` = '$uname'";
+					$result = mysqli_query($connect, $sql);
+					$users = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+					if ($users) {
+						if(password_verify($pass, $users["password"])) {
+							session_start();
+							$_SESSION["users"] = "yes";
+							header("Location:../users/userindex.php");
+							die();
+						}else{
+							echo '<p class="alert alert-danger" style="display: block; margin: 0; padding: 6px;">Password doesnt match</p>';
+						}
+					}else{
+						echo '<p class="alert alert-danger" style="display: block; margin: 0; padding: 6px;">Email doenst match</p>';
+					}
+				}
+				?>
 				<input class="username" type="text" name="name" placeholder="Username">
 				<input class="password" type="password" name="pass" placeholder="Password">
 				<div class="btn-logs">
