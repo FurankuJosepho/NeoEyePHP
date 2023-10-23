@@ -55,7 +55,7 @@
 							<a href="pages/about.php" class="nav-link about-us-active">About Us</a>
 						</li>
 						<li class="nav-item">
-							<a href="pages/book.php" class="nav-link book">Book Now</a>
+							<a href="pages/books.php" class="nav-link book">Book Now</a>
 						</li>
 						<li class="nav-item">
 							<div class="dropdown">

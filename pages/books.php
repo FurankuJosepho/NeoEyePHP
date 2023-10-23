@@ -18,6 +18,10 @@
  <!-- fontawesome -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+ <!-- swiper js link -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+ <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
  <!-- css links -->
  <link rel="stylesheet" href="../css/index.css">
  <link rel="stylesheet" href="../css/books.css">
@@ -25,71 +29,38 @@
 </head>
 
 <body>
- <main>
-  <section class="container">
-   <form action="" class="justify-content-center formContainer">
-    <div class="row my-3">
-     <h3 class="d-flex justify-content-center">
-      Book Your Appointment
-     </h3>
-     <hr>
+ <main class="book-appoint">
+  <section class="img-section">
+   <img class="img-gif" src="#" alt="anything related in clinic">
+  </section>
+  <section class="form-section">
+   <div class="header">
+    <h3 class="d-flex justify-content-center">Neoeye Optical Clinic</h3>
+    <h1 class="d-flex justify-content-center">
+     BOOK APPOINTMENT
+    </h1>
+   </div>
+   <hr>
+   <form method="#">
+    <input type="text" class="fullname" placeholder="Fullname">
+    <input type="email" class="email" placeholder="Email">
+    <div class="data-time">
+     <input type="time" class="time">
+     <input type="date" class="date">
     </div>
-    <div class="row mb-3">
-     <div class="col">
-      <input type="text" class="form-control text-center" placeholder="Enter your Firstname">
-     </div>
-     <div class="col">
-      <input type="text" class="form-control text-center" placeholder="Enter your Lastname">
-     </div>
+    <div class="gender">
+     <p class="text-gen">Gender:</p>
+     <input type="radio" class="form-check-input radio" id="radioMale" name="gender">
+     <label for="radioMale" class="form-check-label label">Male</label>
+     <input type="radio" class="form-check-input radio" id="radioFemale" name="gender">
+     <label for="radioFemale" class="form-check-label label">Female</label>
     </div>
-    <div class="row mb-3">
-     <div class="col">
-      <input type="email" class="form-control text-center" placeholder="Enter your Email">
-     </div>
-     <div class="col">
-      <input type="date" class="form-control text-center">
-     </div>
-    </div>
-    <div class="row mb-3">
-     <div class="col form-check d-flex justify-content-end me-5">
-      <input type="radio" class="form-check-input">
-      <label for="radioMale" class="form-check-label">Male</label>
-     </div>
-     <div class="col form-check me-5">
-      <input type="radio" class="form-check-input">
-      <label for="radioFemale" class="form-check-label">Female</label>
-     </div>
-    </div>
-    <div class="row mb-3">
-     <div class="col">
-      <input type="number" class="form-control text-center" placeholder="Telephone Number">
-     </div>
-     <div class="col">
-      <input type="number" class="form-control text-center" placeholder="Phone Number">
-     </div>
-    </div>
-    <div class="row mb-3">
-     <input type="text" class="form-control text-center" placeholder="Enter your Address">
-    </div>
-    <div class="row mb-3">
-     <div class="col">
-      <input type="text" class="form-control text-center" placeholder="City">
-     </div>
-     <div class="col">
-      <input type="text" class="form-control text-center" placeholder="State">
-     </div>
-     <div class="col">
-      <input type="number" class="form-control text-center" placeholder="Zip Code">
-     </div>
-    </div>
-    <hr>
-    <div class="row">
-     <div class="col  d-flex justify-content-end">
-      <button class="btn">Book Now</button>
-     </div>
-     <div class="col">
-      <button class="btn">Cancel</button>
-     </div>
+    <input type="number" class="number" placeholder="Phone Number">
+    <textarea class="address" placeholder="Address"></textarea>
+    <textarea class="note" placeholder="Medical Note"></textarea>
+    <div class="btn-logs">
+     <input class="btn login-btn" type="submit" name="Login" value="SET">
+     <a class="btn cancel-btn" href="../index.php" role="button">CANCEL</a>
     </div>
    </form>
   </section>

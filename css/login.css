@@ -40,7 +40,8 @@ h1 {
 }
 
 .username,
-.password, .fullname {
+.password,
+.fullname {
   border: none;
   outline: none;
   color: var(--c-b);
@@ -60,8 +61,8 @@ h1 {
 
 hr {
   width: 50%;
-  height: 5px;
-  color: var(--c-v);
+  height: 2px;
+  background: var(--c-v);
 }
 
 .login-btn {
@@ -120,7 +121,7 @@ hr {
     background-image: none;
   }
 
-  .form-section{
-   box-shadow: none;
+  .form-section {
+    box-shadow: none;
   }
 }
