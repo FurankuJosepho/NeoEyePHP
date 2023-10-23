@@ -119,7 +119,7 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                                                     echo "This item is Selected";
                                                 }
                                                 ?> />
-                                            <?php echo $materials['lensmat']; ?><br />
+                                            <?php echo $materials['name']; ?><br />
                                             <?php
                                         }
                                     } else {
@@ -148,7 +148,7 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
                                         foreach ($frames_result as $frames) {
                                             ?>
                                             <input type="checkbox" name="frames[]" value="<?php echo $frames['id']; ?>">
-                                            <?php echo $frames['framesmat']; ?><br />
+                                            <?php echo $frames['name']; ?><br />
                                             <?php
                                         }
                                     } else {

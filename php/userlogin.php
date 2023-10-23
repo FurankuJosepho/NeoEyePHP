@@ -42,7 +42,7 @@
 				<a class="link" href="#">Forgot password?</a>
 			</form>
 			<hr>
-			<p class="signup">Don't have an account? <a class="link" href="#">Sign Up</a></p>
+			<p class="signup">Don't have an account? <a class="link" href="signup.php">Sign Up</a></p>
 		</section>
 		<section class="img-section">
 			<img class="img-gif" src="#" alt="anything related in clinic">

@@ -17,7 +17,7 @@ if (isset($_SESSION['admin'])){
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="data.php" class="nav-link">'.$user.'</a>
+                            <a href="../pages/admin.php" class="nav-link">Doctor '.$user.'</a>
                         </li>
                         <li class="nav-item">
                             <a href="../php/adminlogout.php" class="nav-link">Logout</a>
@@ -56,6 +56,7 @@ if (isset($_SESSION['admin'])){
     <!-- css link -->
     <link rel="stylesheet" href="../css/header.css?v=1">
     <link rel="stylesheet" href="../css/index.css?v=1">
+    <link rel="stylesheet" href="../css/admin.css?v=1">
     <title>Admin</title>
 </head>
 

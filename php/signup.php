@@ -50,7 +50,7 @@
     </div>
    </form>
    <hr>
-   <p class="signup">Already have an account? <a class="link" href="../php/adminlogin.php">Login here</a></p>
+   <p class="signup">Already have an account? <a class="link" href="userlogin.php">Login here</a></p>
   </section>
  </main>
 </body>
