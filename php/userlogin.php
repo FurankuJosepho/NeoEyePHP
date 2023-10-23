@@ -71,7 +71,7 @@ include("../include/connect.php");
 			<p class="signup">Don't have an account? <a class="link" href="signup.php">Sign Up</a></p>
 		</section>
 		<section class="img-section">
-			<img class="img-gif" src="#" alt="anything related in clinic">
+			<img class="img-gif" src="../images/GIF/user.gif" alt="gif Image">
 		</section>
 	</main>
 </body>

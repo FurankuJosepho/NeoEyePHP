@@ -31,7 +31,7 @@
 <body>
  <main class="book-appoint">
   <section class="img-section">
-   <img class="img-gif" src="#" alt="anything related in clinic">
+   <img class="img-gif" src="../images/GIF/book.gif" alt="gif Image">
   </section>
   <section class="form-section">
    <div class="header">
