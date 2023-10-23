@@ -85,7 +85,7 @@ if (isset($_SESSION['users'])) {
 										?>
 								</button>
 								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">Profile</a></li>
+									<li><a class="dropdown-item" href="userprofile.php">Profile</a></li>
 									<li><a class="dropdown-item" href="../php/userlogout.php">logout</a></li>
 
 								</ul>

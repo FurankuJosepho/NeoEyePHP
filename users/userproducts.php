@@ -6,6 +6,18 @@ session_start();
 if (!isset($_SESSION["users"])) {
     header("Location: ../php/userlogin.php");
 }
+if (isset($_SESSION['users'])) {
+	$user = $_SESSION['users'];
+
+	function getProfilePicture($name)
+	{
+		$name_slice = explode(' ', $name);
+		$name_slice = array_filter($name_slice);
+		$initials = '';
+		$initials = (isset($name_slice[0])) ? strtoupper($name_slice[0][0]) : '';
+		return '<div class="profile-pic">' . $initials . '</div>';
+	}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +37,7 @@ if (!isset($_SESSION["users"])) {
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/header.css?v=1">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/products.css">
@@ -36,7 +48,7 @@ if (!isset($_SESSION["users"])) {
     <!-- navigation section -->
     <nav class="navbar navbar-expand-md sticky-top">
         <div class="container-fluid nav-container">
-            <a href="../index.php" class="navbar-brand nav-link home-active">
+            <a href="userindex.php" class="navbar-brand nav-link home-active">
                 Neoeye Optical Clinic
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,10 +69,12 @@ if (!isset($_SESSION["users"])) {
                         <li class="nav-item">
                             <div class="dropdown">
                                 <button class="nav-link path btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa-regular fa-circle-user path"></i>
+                                <?php
+									echo getProfilePicture($user)
+										?>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="userprofile.php">Profile</a></li>
                                     <li><a class="dropdown-item" href="../php/userlogout.php">Logout</a></li>
 
                                 </ul>

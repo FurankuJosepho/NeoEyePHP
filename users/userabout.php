@@ -3,6 +3,18 @@ session_start();
 if (!isset($_SESSION["users"])) {
 	header("Location: ../php/userlogin.php");
 }
+if (isset($_SESSION['users'])) {
+	$user = $_SESSION['users'];
+
+	function getProfilePicture($name)
+	{
+		$name_slice = explode(' ', $name);
+		$name_slice = array_filter($name_slice);
+		$initials = '';
+		$initials = (isset($name_slice[0])) ? strtoupper($name_slice[0][0]) : '';
+		return '<div class="profile-pic">' . $initials . '</div>';
+	}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +39,7 @@ if (!isset($_SESSION["users"])) {
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 	<!-- css link -->
-	<link rel="stylesheet" href="../css/header.css">
+	<link rel="stylesheet" href="../css/header.css?v=1">
 	<link rel="stylesheet" href="../css/about.css">
 	<link rel="stylesheet" href="../css/index.css">
 	<link rel="stylesheet" href="../css/footer.css">
@@ -62,11 +74,13 @@ if (!isset($_SESSION["users"])) {
 							<div class="dropdown">
 								<button class="nav-link path btn dropdown-toggle" type="button"
 									data-bs-toggle="dropdown" aria-expanded="false">
-									<i class="fa-regular fa-circle-user path"></i>
+									<?php
+									echo getProfilePicture($user)
+										?>
 								</button>
 								<ul class="dropdown-menu">
 									<!-- Dropdown menu links -->
-									<li><a class="dropdown-item" href="../php/adminlogin.php">Profile</a></li>
+									<li><a class="dropdown-item" href="userprofile.php">Profile</a></li>
 									<li><a class="dropdown-item" href="../php/userlogout.php">Logout</a></li>
 								</ul>
 							</div>
