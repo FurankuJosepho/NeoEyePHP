@@ -48,7 +48,7 @@ include("../include/connect.php");
 					if ($users) {
 						if(password_verify($pass, $users["password"])) {
 							session_start();
-							$_SESSION["users"] = "yes";
+							$_SESSION["users"] = $uname;
 							header("Location:../users/userindex.php");
 							die();
 						}else{

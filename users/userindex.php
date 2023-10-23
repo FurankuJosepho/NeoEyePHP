@@ -1,7 +1,19 @@
 <?php
 session_start();
 if (!isset($_SESSION["users"])) {
-   header("Location: ../php/userlogin.php");
+	header("Location: ../php/userlogin.php");
+}
+if (isset($_SESSION['users'])) {
+	$user = $_SESSION['users'];
+
+	function getProfilePicture($name)
+	{
+		$name_slice = explode(' ', $name);
+		$name_slice = array_filter($name_slice);
+		$initials = '';
+		$initials = (isset($name_slice[0])) ? strtoupper($name_slice[0][0]) : '';
+		return '<div class="profile-pic">' . $initials . '</div>';
+	}
 }
 ?>
 <!DOCTYPE html>
@@ -32,10 +44,11 @@ if (!isset($_SESSION["users"])) {
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 	<!-- css link -->
-	<link rel="stylesheet" href="../css/header.css?v=2">
+	<link rel="stylesheet" href="../css/header.css?v=3">
 	<link rel="stylesheet" href="../css/home.css?v=1">
 	<link rel="stylesheet" href="../css/index.css?v=1">
 	<link rel="stylesheet" href="../css/footer.css?v=1">
+
 	<title>Home</title>
 </head>
 
@@ -67,12 +80,14 @@ if (!isset($_SESSION["users"])) {
 							<div class="dropdown">
 								<button class="nav-link path btn dropdown-toggle" type="button"
 									data-bs-toggle="dropdown" aria-expanded="false">
-									<i class="fa-regular fa-circle-user path"></i>
+									<?php
+									echo getProfilePicture($user)
+										?>
 								</button>
 								<ul class="dropdown-menu">
 									<li><a class="dropdown-item" href="#">Profile</a></li>
 									<li><a class="dropdown-item" href="../php/userlogout.php">logout</a></li>
-									
+
 								</ul>
 							</div>
 						</li>
@@ -91,7 +106,8 @@ if (!isset($_SESSION["users"])) {
 				<div class="swiper-slide"><img src="../images/JPG/slider3.jpg" alt="Slider 1">
 					<a class="btn-book btn" href="pages/book.php">Book Now</a>
 				</div>
-				<div class="swiper-slide" data-swiper-autoplay="2000"><img src="../images\JPG\slider1.jpg" alt="Slider 2">
+				<div class="swiper-slide" data-swiper-autoplay="2000"><img src="../images\JPG\slider1.jpg"
+						alt="Slider 2">
 					<h1 class="tagline-header">See Clearly and Confidently</h1>
 					<p class="tagline-para">Experience top-quality eye care and feel assured with our expert doctors at
 						Neoeye Optical Clinic.</p>
@@ -190,7 +206,9 @@ if (!isset($_SESSION["users"])) {
 								class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span
 								class="fa fa-star checked"></span>
 						</p>
-						<p class="testi-para">Neoeye Optical Clinic is the best! The doctors are knowledgeable and friendly. They made me feel comfortable and answered all my questions. I highly recommend them for all your eye care needs. Thank you for the great service!</p>
+						<p class="testi-para">Neoeye Optical Clinic is the best! The doctors are knowledgeable and
+							friendly. They made me feel comfortable and answered all my questions. I highly recommend
+							them for all your eye care needs. Thank you for the great service!</p>
 						<h5>-Lena</h5>
 					</div>
 					<div class="swiper-slide"><img class="img-testi" src="../images/JPG/3.jpg" alt="Frank">
