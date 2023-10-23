@@ -73,7 +73,7 @@ if (isset($_POST["Login"])) {
 <body>
     <main class="adminlogin">
         <section class="img-section">
-            <img class="img-gif" src="#" alt="anything related in clinic">
+            <img class="img-gif" src="../images/GIF/admin.gif" alt="anything related in clinic">
         </section>
         <section class="form-section">
             <img class="img-logo" src="../images/PNG/Neoeye Optical Clinic Logo.png" alt="Neoeye Optical Clinic Logo">
