@@ -4,7 +4,7 @@ $connect = mysqli_connect("localhost", "root", "", "neoeye");
 
 session_start();
 if (!isset($_SESSION["users"])) {
-   header("Location: login.php");
+    header("Location: ../php/userlogin.php");
 }
 ?>
 <!DOCTYPE html>
@@ -46,13 +46,13 @@ if (!isset($_SESSION["users"])) {
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="products.php" class="nav-link">Products</a>
+                            <a href="userproducts.php" class="nav-link">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a href="about.php" class="nav-link">About Us</a>
+                            <a href="userabout.php" class="nav-link">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a href="books.php" class="nav-link book">Book Now</a>
+                            <a href="userbooks.php" class="nav-link book">Book Now</a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
@@ -60,8 +60,8 @@ if (!isset($_SESSION["users"])) {
                                     <i class="fa-regular fa-circle-user path"></i>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="../php/adminlogin.php">Admin</a></li>
-                                    <li><a class="dropdown-item" href="../php/userlogin.php">Users</a></li>
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="../php/userlogout.php">Logout</a></li>
 
                                 </ul>
                             </div>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["users"])) {
-   header("Location: login.php");
+   header("Location: ../php/userlogin.php");
 }
 ?>
 <!DOCTYPE html>
@@ -65,8 +65,8 @@ if (!isset($_SESSION["users"])) {
     <textarea class="address" placeholder="Address"></textarea>
     <textarea class="note" placeholder="Medical Note"></textarea>
     <div class="btn-logs">
-     <input class="btn login-btn" type="submit" name="Login" value="SET">
-     <a class="btn cancel-btn" href="../index.php" role="button">CANCEL</a>
+     <input class="btn login-btn" type="submit" name="submit" value="SET">
+     <a class="btn cancel-btn" href="userindex.php" role="button">CANCEL</a>
     </div>
    </form>
   </section>
