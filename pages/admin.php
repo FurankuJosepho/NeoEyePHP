@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['admin'])){
+if (isset($_SESSION['admin'])) {
     $user = $_SESSION['admin'];
     echo '
     <nav class="navbar navbar-expand-md sticky-top">
@@ -17,7 +17,7 @@ if (isset($_SESSION['admin'])){
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="../pages/admin.php" class="nav-link">Doctor '.$user.'</a>
+                            <a href="../pages/admin.php" class="nav-link">Doctor ' . $user . '</a>
                         </li>
                         <li class="nav-item">
                             <a href="../php/adminlogout.php" class="nav-link">Logout</a>
@@ -67,17 +67,12 @@ if (isset($_POST["submit"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bootstrap link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- swiper js link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -91,13 +86,35 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
-    <h1>Hello <?php echo $user;?></h1>
+    <h1>Hello <?php echo $user; ?></h1>
     <form method="POST" enctype="multipart/form-data">
         <input type="text" name="name" placeholder="Prod Name">
         <input type="text" name="price" placeholder="Prod Price">
         <input type="file" name="images">
         <input type="submit" name="submit" value="Upload">
     </form>
+    <table>
+        <thead class="th-container">
+            <th>Fullname</th>
+            <th>Email</th>
+            <th>Time</th>
+            <th>Date</th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Medical Note</th>
+        </thead>
+        <tbody class="td-container">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tbody>
+    </table>
 </body>
 
 </html>
