@@ -50,7 +50,7 @@ if (isset($_SESSION['users'])) {
 	<!-- navigation section -->
 	<nav class="navbar navbar-expand-md sticky-top">
 		<div class="container-fluid nav-container">
-			<a href="../index.php" class="navbar-brand nav-link home-active">
+			<a href="userindex.php" class="navbar-brand nav-link home-active">
 				Neoeye Optical Clinic
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"

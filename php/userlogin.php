@@ -45,7 +45,10 @@ include("../include/connect.php");
 					$result = mysqli_query($connect, $sql);
 					$users = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-					if ($users) {
+					if(empty($uname) or empty($pass)) {
+						echo '<p class="alert alert-danger" style="display: block; margin: 0; padding: 6px;">Please Fill up the form</p>';
+					}
+					elseif ($users) {
 						if(password_verify($pass, $users["password"])) {
 							session_start();
 							$_SESSION["users"] = $uname;
@@ -65,7 +68,7 @@ include("../include/connect.php");
 					<input class="btn login-btn" type="submit" name="Login" value="LOGIN">
 					<a class="btn cancel-btn" href="../index.php" role="button">CANCEL</a>
 				</div>
-				<a class="link" href="#">Forgot password?</a>
+				<a class="link" href="../maintenance.php">Forgot password?</a>
 			</form>
 			<hr>
 			<p class="signup">Don't have an account? <a class="link" href="signup.php">Sign Up</a></p>

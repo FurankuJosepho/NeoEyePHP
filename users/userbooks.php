@@ -83,7 +83,7 @@ if(isset($_POST['submit'])){
         <textarea class="note" name="note" placeholder="Medical Note"></textarea>
         <div class="btn-logs">
           <input class="btn login-btn" type="submit" name="submit" value="SET">
-          <a class="btn cancel-btn" href="../index.php" role="button">CANCEL</a>
+          <a class="btn cancel-btn" href="userindex.php" role="button">CANCEL</a>
         </div>
       </form>
     </section>

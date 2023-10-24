@@ -64,9 +64,12 @@ include("../include/connect.php");
                     $sql = "SELECT * FROM `users` WHERE `email` = '$email'";
                     $result = mysqli_query($connect, $sql);
                     $row = mysqli_num_rows($result);
-                    if ($row > 0) {
-                        echo '<p class="alert alert-danger" style="display: block; margin: 0; padding: 6px;">Email already exist</p>';
+                    if ($row > 1 or !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                        echo '<p class="alert alert-danger" style="display: block; margin: 0; padding: 6px;">Email already exist or not Valid or Empty</p>';
+                    }else {
+                        echo '<p class="alert alert-danger" style="display: none; margin: 0; padding: 6px;"></p>';
                     }
+
                     if (count($err) > 0) {
                         foreach ($err as $msg) {
                             echo $msg;
@@ -77,27 +80,16 @@ include("../include/connect.php");
                         $stmtprep = mysqli_stmt_prepare($stmt, $sql);
                         if ($stmtprep) {
                             mysqli_stmt_bind_param($stmt, "ssss", $fname, $email, $uname, $hpassword);
-                            mysqli_stmt_execute($stmt);
-                            echo '<p class="alert alert-success" style="display: block; margin: 0; padding: 6px;">Sign Up Successful</p>';
+                            $execute = mysqli_stmt_execute($stmt);
                         } else {
                             die('Something went wrong');
                         }
                     }                    
                 }
                 ?>
-                <input class="fullname" type="text" name="fname" placeholder="Fullname">
+                <input class="fullname" type="text" name="fname" placeholder="Fullname" required>
                 <input class="email" type="text" name="email" placeholder="Email">
-                <?php
-                if (isset($_POST['submit'])) {
-                    $email = $_POST['email'];
-                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                        echo '<p class="text-danger" style="display: block; margin: 0;">Email is not Valid</p>';
-                    } else {
-                        echo '<p class="alert alert-danger" style="display: none; margin: 0;"></p>';
-                    }
-                }
-                ?>
-                <input class="username" type="text" name="name" placeholder="Username">
+                <input class="username" type="text" name="name" placeholder="Username" >
                 <input class="password" type="password" name="pass" placeholder="Password">
                 <?php
                 if (isset($_POST['submit'])) {
