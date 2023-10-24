@@ -9,7 +9,7 @@ if (isset($_POST["Login"])) {
     $err = array();
 
     if (empty($name)) {
-        $err['admin'] = 'Please Enter Your Name';
+        $err['admin'] = 'Please Enter Your Username';
     } elseif (empty($pass)) {
         $err['admin'] = 'Please Enter Your Password';
     }
@@ -88,7 +88,7 @@ if (isset($_POST["Login"])) {
                     <input class="btn login-btn" type="submit" name="Login" value="LOGIN">
                     <a class="btn cancel-btn" href="../index.php" role="button">CANCEL</a>
                 </div>
-                <a class="link" href="#">Forgot password?</a>
+                <a class="link" href="../maintenance.php">Forgot password?</a>
             </form>
         </section>
     </main>

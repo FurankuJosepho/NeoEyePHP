@@ -1,21 +1,5 @@
 <?php
 include("../include/connect.php");
-if(isset($_POST['submit'])){
-$fname = $_POST['name'];
-$email = $_POST['email'];
-$time = $_POST['time'];
-$date = $_POST['date'];
-$gender = $_POST['gender'];
-$pnumber = $_POST['number'];
-$address = $_POST['address'];
-$mednote = $_POST['note'];
-
-$sql = "INSERT INTO `book`(`name`, `email`, `time`, `date`, `gender`, `number`, `address`, `notes`) VALUES ('".$fname."','".$email."','".$time."','".$date."','".$gender."','".$pnumber."','".$address."','".$mednote."')";
-
-$connect->query($sql) or die($connect->error);
-
-echo header("Location: ../index.php");
-}
 ?>
 
 <!DOCTYPE html>
@@ -31,12 +15,17 @@ echo header("Location: ../index.php");
   <link rel="icon" type="image/x-icon" href="../images/PNG/Neoeye Optical Clinic Logo.png">
 
   <!-- bootstrap link -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
   <!-- fontawesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- swiper js link -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -62,6 +51,28 @@ echo header("Location: ../index.php");
       </div>
       <hr>
       <form method="POST">
+        <?php
+        if (isset($_POST['submit'])) {
+          $fname = $_POST['name'];
+          $email = $_POST['email'];
+          $time = $_POST['time'];
+          $date = $_POST['date'];
+          $gender = $_POST['gender'];
+          $pnumber = $_POST['number'];
+          $address = $_POST['address'];
+          $mednote = $_POST['note'];
+
+          if (empty($fname) or empty($email) or empty($time) or empty($date) or empty($gender) or empty($pnumber) or empty($address) or empty($mednote)) {
+            echo '<p class="alert alert-danger" style="display: block; margin: 0; padding: 6px;">Please Fill the Form</p>';
+          } else {
+            $sql = "INSERT INTO `book`(`name`, `email`, `time`, `date`, `gender`, `number`, `address`, `notes`) VALUES ('" . $fname . "','" . $email . "','" . $time . "','" . $date . "','" . $gender . "','" . $pnumber . "','" . $address . "','" . $mednote . "')";
+
+            $connect->query($sql) or die($connect->error);
+
+            echo header("Location: ../index.php");
+          }
+        }
+        ?>
         <input type="text" class="fullname" name="name" placeholder="Fullname">
         <input type="email" class="email" name="email" placeholder="Email">
         <div class="data-time">
